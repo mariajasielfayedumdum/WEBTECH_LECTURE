@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Prelim</title>
+		<link rel="stylesheet" href="prelimstyle.css">
+	</head>
+	<body>
+		<h1>WEB SYSTEMS AND TECHNOLOGIES</h1>
+		<div class='topic' id='HTTP'>
+			<h2>Hypertext Transfer Protocol (HTTP)</h2>
+			<ul>
+				<li>application layer communication protocol used to access</li>
+				<ul>
+					<li>standard that is used by application that communicate with one another</li>
+				</ul>
+					<li>invented by Tim Berners-Lee (Timothy)</li>
+					<li>jointly developed by the W3C (world wide web consortium) and the IETF (internet engineering task force)</li>
+					<li>version history</li>
+				<ul id='history'>
+					<li>HTTP 0.9 (1991)</li>
+					<ul>
+						<li>original HTTP as defined in 1991</li>
+						<li>phases: connection -> request -> response -> disconnection (4 steps)</li>
+					</ul>
+						<li>HTTP 1.0 (RFC 1945, May 1996)</li>
+						<li>HTTP 1.1 (RFC 2068, Jan 1997; RFC 2616, Jun 1999) (RFC 7230-7235 Jun 2014)</li>
+						<li>HTTP 2.0 (RFC 7540, May 2015)</li>
+					<ul>
+						<li>application on the client/server side</li>
+					</ul>
+				</ul>
+				<li>SPDY – accessing from the browser</li>
+			</ul>
+			<h2>HTTP(unsecure) Fundamentals</h2>
+			<ul id='Fundamentals'>
+					<li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
+					<li>uses a request-response standard protocol</li>
+					<li>the client sends an HTTP request message to the server</li>
+					<li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
+					<li>is a stateless communications protocol</li>
+					<li>server do not keep information from client in-between</li>
+					<li>server send a requests and forget about it</li>
+					<li>based on a client-server architecture<li>
+				<ul>
+					<li>clients a.k.a user agents (ua)</li>
+					<ul>
+						<li>web browser, web crawlers/spiders, other end user tools and applications</li>				
+					</ul>
+					<li>server</li>
+					<ul>
+						<li>origin server</li>
+						<li>proxy server (eg. Authentication server), gateways, tunnels</li>
+						<li>access by the client</li>
+					</ul>
+					<li>-IANA – internet assigned numbers authority</li>
+					<li>ICANN – Internet Corporation for assigned names and numbers</li>
+					<li>push protocol – server can volunteer information</li>
+					<li>polling – periodically check for the information</li>
+					<li>provides support for other functionalities, such as:</li>
+					<ul>
+						<li>cache control – stored of CSS</li>
+						<li>content media type (MIME – multipurpose internet mail extensions) specification</li>
+						<li>language and character set specification</li>
+						<li>content/transfer codings</li>
+						<li>content negotiation</li>
+						<li>client-server protocol negotiations</li>
+						<ul>
+							<li>3 versions:</li>
+							<ul>
+								<li>HTTP/ HTTPS 1.0, 1.1, 2 – for the upgrades and downgrades according to the server.</li>
+							</ul>
+						</ul>
+						<li>persistent connections – http 1.1</li>	
+						<li>request pipelining – one connection</li>
+						<li>authentication/authorization (eg. Screen readers – to read the content for you) content and transfer coding</li>		
+					</ul>
+				</ul>
+			</ul>
+				<h2>HTTP resource addressing</h2>
+				<ul  id='Addressing'>
+					<li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
+					<ul>
+						<li>2 subtypes of URI:</li>
+						<ul>
+							<li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
+							<li>URL – uniform resource locator (eg. Google.com)</li>
+						</ul>
+					</ul>
+					<li>authority</li>
+					<ul>
+						<li>user information/aunthentication credentials (deprecated)</li>
+						<li>host – domain name (resolved to an ip address using dns) of the server where the resource resides (or will be created)</li>
+						<li>port number</li>
+					</ul>
+					<li>path to resource (resolved relative to the document root on the server)</li>
+					<p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; <img src: “a.jpg”></p>
+					<li>may refer to a static or dynamic resource</li>
+					<p>relative</p>
+					<li>query</li>
+					<li></li>
+					<li></li>
+				</ul>
+			
+
+
+			
+
+		</div>
+	</body>
