@@ -53,7 +53,7 @@
 						<li>proxy server (eg. Authentication server), gateways, tunnels</li>
 						<li>access by the client</li>
 					</ul>
-					<li>-IANA – internet assigned numbers authority</li>
+					<li>IANA – internet assigned numbers authority</li>
 					<li>ICANN – Internet Corporation for assigned names and numbers</li>
 					<li>push protocol – server can volunteer information</li>
 					<li>polling – periodically check for the information</li>
@@ -77,30 +77,64 @@
 					</ul>
 				</ul>
 			</ul>
-				<h2>HTTP resource addressing</h2>
-				<ul  id='Addressing'>
-					<li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
+			<h2>HTTP resource addressing</h2>
+			<ul  id='Addressing'>
+				<li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
+				<ul>
+					<li>2 subtypes of URI:</li>
 					<ul>
-						<li>2 subtypes of URI:</li>
-						<ul>
-							<li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
-							<li>URL – uniform resource locator (eg. Google.com)</li>
-						</ul>
+						<li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
+						<li>URL – uniform resource locator (eg. Google.com)</li>
 					</ul>
-					<li>authority</li>
-					<ul>
-						<li>user information/aunthentication credentials (deprecated)</li>
-						<li>host – domain name (resolved to an ip address using dns) of the server where the resource resides (or will be created)</li>
-						<li>port number</li>
-					</ul>
-					<li>path to resource (resolved relative to the document root on the server)</li>
-					<p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; <img src: “a.jpg”></p>
-					<li>may refer to a static or dynamic resource</li>
-					<p>relative</p>
-					<li>query</li>
-					<li></li>
-					<li></li>
 				</ul>
+				<li>authority</li>
+				<ul>
+					<li>user information/aunthentication credentials (deprecated)</li>
+					<li>host – domain name (resolved to an ip address using dns) of the server where the resource resides (or will be created)</li>
+					<li>port number</li>
+				</ul>
+				<li>path to resource (resolved relative to the document root on the server)</li>
+			</ul>
+			<p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; img src: “a.jpg” -- may refer to a static or dynamic resource</p>
+
+			<li>query - typically provided as key = value pairs, with ("&" - ampersand) separators between key/value pairs. It may be URL-encoded.</li>
+			<li>frragment identifier (eg. #adr) - starts with a hashtag #</li>
+			<li>HTTPS - get HTTP message end encrypts (transformational that is math based).</li>
+			<ul>
+				<li>letencrypt.org - digital certificates for free</li>
+			</ul>
+			<h2>HTTP Request Message</h2>
+			<ul  id='RequestMsg'>
+				<li>Request line (CRLF - carriage return line feed  - terminated line)</li>
+				<li>Method</li>
+				<ul>
+					<li>Standard Method</li>
+					<ul>
+						<li>Safe Methods: get(retrieve), head, options, trace, connect</li>
+						<li>Modify server/not safe: post, put, delete</li>
+						<li>Idempotent: get, head, put, delete, options, trace</li>
+					</ul>
+					<li>Extension Method</li>
+					<ul>
+						<li>WebDAV (RFC 4918) - PROPFIND, PROPPATCH, MKCOL (make a collection / create folder), COPY, MOVE, LOCK, UNLOCK</li>
+						<li>Options - query what the server can do</li>
+						<li>Trace - request a loop-back of the request message; typically used for testing/diagnostic of the request/response chain; to know where you committed error
+							<br>
+							<br> (eg. 34 - length of the section [hex 1 byte])
+							<br>Trace /index HTTP/1.1
+							<br>Host: www.webtek.org</li>
+						<li>Connect - establishment of a tunnel to the destination orign servers and if successfull, thereafter restrict its behavior to blind-forwarding of packets in both directions, until the tunnel is closed.</li>
+						</ul>
+				</ul>
+				<li>Request URI</li>
+				<ul>
+					<li>RFC 2616 - 4236 Update Required</li>	
+				</ul>
+			</ul>
+		
+		
+			
+				
 			
 
 
@@ -108,3 +142,4 @@
 
 		</div>
 	</body>
+</html>
