@@ -54,7 +54,8 @@
             <div class = "container">
                 <h2>Hypertext Transfer Protocol (HTTP)</h2>
                 <ul id='HTTP'>
-                    <li>application layer communication protocol used to access</li>
+                    <li>application layer communication protocol used to access and used primarily to retrieve hypertext (on hypermedia) documents and resources on the World Wide Web</li>
+					<li>Jointly developed by the W3C and the IETF</li>
                     <ul>
                         <li>standard that is used by application that communicate with one another</li>
                     </ul>
@@ -83,6 +84,17 @@
                 <h2>HTTP(unsecure) Fundamentals</h2>
                 <ul id='Fundamentals'>
                     <li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
+					<li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
+					<ul>
+						 <li>Scheme (http: or https:)</li>
+						 <li>(optional) authentication information</li>
+						 <li>Host and (optional) port number</li>
+						 <li>Path (resolved to the document root on the server) to the resource</li>
+						 <li>(optional) scheme-specific parameters</li>
+						 <li>(optional) URL-encoded query</li>
+						 <li>(optional) bookmark (or fragment identifier)</li>
+						 <img src="../WEBTECH_LECTURE-master/URL example.png" alt=""/>
+					</ul>
                     <li>uses a request-response standard protocol</li>
                     <li>the client sends an HTTP request message to the server</li>
                     <li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
