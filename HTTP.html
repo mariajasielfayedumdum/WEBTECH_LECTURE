@@ -50,9 +50,227 @@
                 </div>
            </div>
         </nav>
-        
-    
-    
+        <div class = "jumbotron">   
+            <div class = "container">
+                <h2>Hypertext Transfer Protocol (HTTP)</h2>
+                <ul id='HTTP'>
+                    <li>application layer communication protocol used to access</li>
+                    <ul>
+                        <li>standard that is used by application that communicate with one another</li>
+                    </ul>
+                        <li>invented by Tim Berners-Lee (Timothy)</li>
+                        <li>jointly developed by the W3C (world wide web consortium) and the IETF (internet engineering task force)</li>
+                        <li>version history</li>
+                    <ul id='history'>
+                        <li>HTTP 0.9 (1991)</li>
+                        <ul>
+                            <li>original HTTP as defined in 1991</li>
+                            <li>phases: connection -> request -> response -> disconnection (4 steps)</li>
+                        </ul>
+                            <li>HTTP 1.0 (RFC 1945, May 1996)</li>
+                            <li>HTTP 1.1 (RFC 2068, Jan 1997; RFC 2616, Jun 1999) (RFC 7230-7235 Jun 2014)</li>
+                            <li>HTTP 2.0 (RFC 7540, May 2015)</li>
+                        <ul>
+                            <li>application on the client/server side</li>
+                        </ul>
+                    </ul>
+                    <li>SPDY – accessing from the browser</li>
+                </ul>
+            </div>
+        </div>
+        <div class = "jumbotron">  
+            <div class = "container">
+                <h2>HTTP(unsecure) Fundamentals</h2>
+                <ul id='Fundamentals'>
+                    <li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
+                    <li>uses a request-response standard protocol</li>
+                    <li>the client sends an HTTP request message to the server</li>
+                    <li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
+                    <li>is a stateless communications protocol</li>
+                    <li>server do not keep information from client in-between</li>
+                    <li>server send a requests and forget about it</li>
+                    <li>based on a client-server architecture<li>
+                    <ul>
+                        <li>clients a.k.a user agents (ua)</li>
+                        <ul>
+                            <li>web browser, web crawlers/spiders, other end user tools and applications</li>               
+                        </ul>
+                        <li>server</li>
+                        <ul>
+                            <li>origin server</li>
+                            <li>proxy server (eg. Authentication server), gateways, tunnels</li>
+                            <li>access by the client</li>
+                        </ul>
+                        <li>IANA – internet assigned numbers authority</li>
+                        <li>ICANN – Internet Corporation for assigned names and numbers</li>
+                        <li>push protocol – server can volunteer information</li>
+                        <li>polling – periodically check for the information</li>
+                        <li>provides support for other functionalities, such as:</li>
+                        <ul>
+                            <li>cache control – stored of CSS</li>
+                            <li>content media type (MIME – multipurpose internet mail extensions) specification</li>
+                            <li>language and character set specification</li>
+                            <li>content/transfer codings</li>
+                            <li>content negotiation</li>
+                            <li>client-server protocol negotiations</li>
+                            <ul>
+                                <li>3 versions:</li>
+                                <ul>
+                                    <li>HTTP/ HTTPS 1.0, 1.1, 2 – for the upgrades and downgrades according to the server.</li>
+                                </ul>
+                            </ul>
+                            <li>persistent connections – http 1.1</li>  
+                            <li>request pipelining – one connection</li>
+                            <li>authentication/authorization (eg. Screen readers – to read the content for you) content and transfer coding</li>        
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class = "jumbotron">  
+            <div class = "container">
+                <h2>HTTP resource addressing</h2>
+                <ul id='Addressing'>
+                    <li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
+                    <ul>
+                        <li>2 subtypes of URI:</li>
+                        <ul>
+                            <li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
+                            <li>URL – uniform resource locator (eg. Google.com)</li>
+                        </ul>
+                    </ul>
+                    <li>authority</li>
+                    <ul>
+                        <li>user information/aunthentication credentials (deprecated)</li>
+                        <li>host – domain name (resolved to an ip address using dns) of the server where the resource resides (or will be created)</li>
+                        <li>port number</li>
+                    </ul>
+                    <li>path to resource (resolved relative to the document root on the server)</li>
+                </ul>
+                <p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; img src: “a.jpg” -- may refer to a static or dynamic resource</p>
+
+                <li>query - typically provided as key = value pairs, with ("&" - ampersand) separators between key/value pairs. It may be URL-encoded.</li>
+                <li>frragment identifier (eg. #adr) - starts with a hashtag #</li>
+                <li>HTTPS - get HTTP message end encrypts (transformational that is math based).</li>
+                <ul>
+                    <li>letencrypt.org - digital certificates for free</li>
+                </ul>
+                <h2>HTTP Request Message</h2>
+                <ul class="col-lg-12" id='RequestMsg'>
+                    <li>Request line (CRLF - carriage return line feed  - terminated line)</li>
+                    <li>Method</li>
+                    <ul>
+                        <li>Standard Method</li>
+                        <ul>
+                            <li>Safe Methods: get(retrieve), head, options, trace, connect</li>
+                            <li>Modify server/not safe: post, put, delete</li>
+                            <li>Idempotent: get, head, put, delete, options, trace</li>
+                        </ul>
+                        <li>Extension Method</li>
+                        <ul>
+                            <li>WebDAV (RFC 4918) - PROPFIND, PROPPATCH, MKCOL (make a collection / create folder), COPY, MOVE, LOCK, UNLOCK</li>
+                            <li>Options - query what the server can do</li>
+                            <li>Trace - request a loop-back of the request message; typically used for testing/diagnostic of the request/response chain; to know where you committed error
+                                <br>
+                                <br> (eg. 34 - length of the section [hex 1 byte])
+                                <br>Trace /index HTTP/1.1
+                                <br>Host: www.webtek.org</li>
+                            <li>Connect - establishment of a tunnel to the destination orign servers and if successfull, thereafter restrict its behavior to blind-forwarding of packets in both directions, until the tunnel is closed.</li>
+                            </ul>
+                    </ul>
+                    <li>Request URI</li>
+                    <ul>
+                        <li>RFC 2616 - 4236 Update Required</li>    
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class = "jumbotron">  
+            <div class = "container">
+                <h2>HTTP Response Message</h2>
+                <ul class="col-lg-12"  id='Response'>
+                    <li>status line (special line)</li>
+                    <ul>
+                        <li>HTTP protocol version</li>
+                        <li>reason phrase – descriptive</li>
+                        <li>status code – case of failure (numeric)</li>    
+                    </ul>
+                    <li>status code</li>            
+                    <ul>
+                        <li>1xx (informational)</li>
+                        <ul>
+                            <li>100 continue</li>
+                            <li>101 switching protocols – request to switch using upgrade; protocol negotiation</li>
+                        </ul>
+                        <li>2xx (success)</li>
+                        <ul>    
+                            <li>200 ok</li>
+                            <li>201 created</li>
+                            <li>202 accepted (not process but accepted)</li>
+                            <li>203 non authoritative information</li>
+                            <li>204 no content</li>
+                            <li>205 reset content (submit data via POST)</li>
+                            <li>206 partial content</li>
+                        </ul>
+                        <li>3xx (redirection) (location: )</li>
+                        <ul>
+                            <li>300 multiple choices – request with several version</li>
+                            <li>301 moved permanently – no longer there</li>
+                            <li>302 found (redirection)</li>
+                            <li>303 see other (redirection)</li>
+                            <li>304 not modified – conditional but has missing</li>
+                            <li>305 use proxy – don’t fetch it directly</li>
+                            <li>306 (unused)</li>
+                            <li>307 temporary redirect</li>
+                        </ul>
+                        <li>4xx (client error)</li>
+                        <ul>
+                            <li>400 bad request</li>
+                            <li>401 unauthorized (protected)</li>
+                            <li>402 payment required (commercial application)</li>
+                            <li>403 forbidden (not allowed to access)</li>
+                            <li>404 not found (not correct request)</li>
+                            <li>405 method not allowed</li>
+                            <li>406 not acceptable</li>
+                            <li>407 proxy authentication required</li>
+                            <li>408 request timeout</li>
+                            <li>409 conflict</li>
+                            <li>410 gone (none)</li>
+                            <li>411 length required</li>
+                            <li>412 precondition failed</li>
+                            <li>413 request entity too large</li>
+                            <li>414 request URI too large</li>
+                            <li>415 unsupported media type</li>
+                            <li>416 requested range not satisfiable</li>
+                            <li>417 expectation failed</li>
+                            <li>426 upgrade required ( 3000 characters)</li>
+                        </ul>
+                        <li>5xx (server error)</li>
+                        <ul>
+                            <li>500 internal server error</li>
+                            <li>501 not implemented</li>
+                            <li>502 bad gateway (cot configure)</li>
+                            <li>503 service unavailable</li>
+                            <li>504 gateway time-out</li>
+                            <li>505 http version not supported</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class = "jumbotron">  
+            <div class = "container">
+            <h2>HTTP – extensible protocol</h2>
+                <ul class="col-lg-12" id='extensible'>
+                    <li>basic ways (communicate to new base protocol functionality):</li>
+                    <ul>
+                        <li>new request method</li>
+                        <li>new message header</li>
+                        <li>new status code</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
     </body>
         
 </html>
