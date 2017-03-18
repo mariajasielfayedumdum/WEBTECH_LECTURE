@@ -1,327 +1,58 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>HTTP</title>
-		<link rel="stylesheet" href="prelimstyle.css">
-	</head>
-	<body>
-		<h1>WEB SYSTEMS AND TECHNOLOGIES</h1>
-		<div class='topic' id='HTTP'>
-			<h2>Hypertext Transfer Protocol (HTTP)</h2>
-			<ul>
-				<li>application layer communication protocol used to access</li>
-				<ul>
-					<li>standard that is used by application that communicate with one another</li>
-				</ul>
-					<li>invented by Tim Berners-Lee (Timothy)</li>
-					<li>jointly developed by the W3C (world wide web consortium) and the IETF (internet engineering task force)</li>
-					<li>version history</li>
-				<ul id='history'>
-					<li>HTTP 0.9 (1991)</li>
-					<ul>
-						<li>original HTTP as defined in 1991</li>
-						<li>phases: connection -> request -> response -> disconnection (4 steps)</li>
-					</ul>
-						<li>HTTP 1.0 (<a href="https://tools.ietf.org/html/rfc1945">RFC 1945, May 1996</a>)</li>
-						<li>HTTP 1.1 (<a href="https://www.ietf.org/rfc/rfc2068.txt">RFC 2068, Jan 1997</a>; <a href="https://www.ietf.org/rfc/rfc2616.txt">RFC 2616, Jun 1999</a>) (RFC <a href="https://tools.ietf.org/html/rfc7230">7230</a>-<a href="https://tools.ietf.org/html/rfc7235">7235</a> Jun 2014)</li>
-						<li>HTTP 2.0 (<a href="https://tools.ietf.org/html/rfc7540">RFC 7540, May 2015</a>)</li>
-					<ul>
-						<li>application on the client/server side</li>
-					</ul>
-				</ul>
-				<li>SPDY – accessing from the browser</li>
-			</ul>
-			<h2>HTTP(unsecure) Fundamentals</h2>
-			<ul id='Fundamentals'>
-					<li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
-					<li>uses a request-response standard protocol</li>
-					<li>the client sends an HTTP request message to the server</li>
-					<li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
-					<li>is a stateless communications protocol</li>
-					<li>server do not keep information from client in-between</li>
-					<li>server send a requests and forget about it</li>
-					<li>based on a client-server architecture<li>
-				<ul>
-					<li>clients a.k.a user agents (ua)</li>
-					<ul>
-						<li>web browser, web crawlers/spiders, other end user tools and applications</li>				
-					</ul>
-					<li>server</li>
-					<ul>
-						<li>origin server</li>
-						<li>proxy server (eg. Authentication server), gateways, tunnels</li>
-						<li>access by the client</li>
-					</ul>
-					<li>IANA – internet assigned numbers authority</li>
-					<li>ICANN – Internet Corporation for assigned names and numbers</li>
-					<li>push protocol – server can volunteer information</li>
-					<li>polling – periodically check for the information</li>
-					<li>provides support for other functionalities, such as:</li>
-					<ul>
-						<li>cache control – stored of CSS</li>
-						<li>content media type (MIME – multipurpose internet mail extensions) specification</li>
-						<li>language and character set specification</li>
-						<li>content/transfer codings</li>
-						<li>content negotiation</li>
-						<li>client-server protocol negotiations</li>
-						<ul>
-							<li>3 versions:</li>
-							<ul>
-								<li>HTTP/ HTTPS 1.0, 1.1, 2 – for the upgrades and downgrades according to the server.</li>
-							</ul>
-						</ul>
-						<li>persistent connections – http 1.1</li>	
-						<li>request pipelining – one connection</li>
-						<li>authentication/authorization (eg. Screen readers – to read the content for you) content and transfer coding</li>		
-					</ul>
-				</ul>
-			</ul>
-			<h2>HTTP resource addressing</h2>
-			<ul  id='Addressing'>
-				<li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
-				<ul>
-					<li>2 subtypes of URI:</li>
-					<ul>
-						<li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
-						<li>URL – uniform resource locator (eg. Google.com)</li>
-					</ul>
-				</ul>
-				<li>authority</li>
-				<ul>
-					<li>user information/aunthentication credentials (deprecated)</li>
-					<li>host – domain name (resolved to an ip address using dns) of the server where the resource resides (or will be created)</li>
-					<li>port number</li>
-				</ul>
-				<li>path to resource (resolved relative to the document root on the server)</li>
-			</ul>
-			<p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; img src: “a.jpg” -- may refer to a static or dynamic resource</p>
-
-			<li>query - typically provided as key = value pairs, with ("&" - ampersand) separators between key/value pairs. It may be URL-encoded.</li>
-			<li>frragment identifier (eg. #adr) - starts with a hashtag #</li>
-			<li>HTTPS - get HTTP message end encrypts (transformational that is math based).</li>
-			<ul>
-				<li>letencrypt.org - digital certificates for free</li>
-			</ul>
-			<h2>HTTP Request Message</h2>
-			<ul  id='RequestMsg'>
-				<li>Request line (CRLF - carriage return line feed  - terminated line)</li>
-				<li>Method</li>
-				<ul>
-					<li>Standard Method</li>
-					<ul>
-						<li>Safe Methods: get(retrieve), head, options, trace, connect</li>
-						<li>Modify server/not safe: post, put, delete</li>
-						<li>Idempotent: get, head, put, delete, options, trace</li>
-					</ul>
-					<li>Extension Method</li>
-					<ul>
-						<li>WebDAV (RFC 4918) - PROPFIND, PROPPATCH, MKCOL (make a collection / create folder), COPY, MOVE, LOCK, UNLOCK</li>
-						<li>Options - query what the server can do</li>
-						<li>Trace - request a loop-back of the request message; typically used for testing/diagnostic of the request/response chain; to know where you committed error
-							<br>
-							<br> (eg. 34 - length of the section [hex 1 byte])
-							<br>Trace /index HTTP/1.1
-							<br>Host: www.webtek.org</li>
-						<li>Connect - establishment of a tunnel to the destination orign servers and if successfull, thereafter restrict its behavior to blind-forwarding of packets in both directions, until the tunnel is closed.</li>
-						</ul>
-				</ul>
-				<li>Request URI</li>
-				<ul>
-					<li>RFC 2616 - 4236 Update Required</li>	
-				</ul>
-			</ul>
-			<h2>HTTP Protocol Version</h2>
-			<ul id='Protocol'>
-				<li>Message Headers (general, request, and/or entity header)</li>
-				<ul>
-					<li>fieldname: value</li>
-					<li>general (request and response, cache-control), request, respond, entity (payload too your message, allow) header fields </li>
-					<li>HTTP 1.1 requires at least 1 header (most request)</li>
-					<li> empty line (CRLF) - part of the structure; to end</li>
-					<li>message body aka payload (optional)</li>
-					<li>General (used by user agents), Request (server), Response (server), Entity (payment or actual body) HEADER FIELDS</li>
-					<ul>
-						<li>General Header Fields</li>
-						<ul>
-							<li>cache-control - request/response; local storage to put resources (eg. Browser, gateways); no cache, max-age = 0.</li>
-							<li>connection - establish persistent connections (eg. keep-alive timeout=5, max=100; close).</li>
-							<li>data - indicate when your transfer the resource</li>
-							<li>pragma - generic directive</li>
-							<li>transfer encoding</li>
-							<li>trailer - list of headers</li>
-							<li>upgrade - switching to a different version (eg. h2 - http v.2; h2c - https v.2) </li>
-							<li>via - walkthrough</li>
-							<li>warning - errors</li>
-						</ul>
-						<li> Request Header Fields </li>
-						<ul>
-							<li>(eg. accept, accept-charset, accept-encoding, accept-language, host)</li>
-							<ul>
-								<li>**/*; lowest priority</li>
-								<li>html, application</li>
-								<li>q = priority value; highest:1(default); lowest:0</li>
-								<li>image/webp (negotiation) = higher priority</li>
-							</ul>
-							<li>accept-language</li>
-							<ul>
-								<li>en-US, en; q=0.8, es; q=0.6</li>
-								<li>setting -> advance setting -> language and input setting</li>
-								<li>language information by the agent</li>
-							</ul>
-							<li>accept-encoding</li>
-							<ul>
-								<li>concept length = 1893 bytes resource</li>
-								<li>none, compressed html (decompressed to be actual html)</li>
-								<li>gzip, deflate, sdch (can handle)</li>
-								<li>vary - response header</li>
-							</ul>
-							<li>authorization - authorize user can access; www.authentic; if not authorized: 401</li>
-							<li>proxy-authentication</li>
-							<li>expect</li>
-							<ul>
-								<li>2 face operation</li>
-								<li>content length (send) -> expect: 100 continue ->  100 continue/417 expectation failed</li>
-							</ul>
-							<li>from - contact address of the user generating to request</li>
-							<li>host - required from HTTP 1.1; dedicated hosting: 1.1; shared virtual hosting: 1:m</li>
-						</ul>
-						<li>Response Header Field</li>
-						<ul>
-							<li>accept - range</li>
-							<li>age - age of the response; cache resource to particular age</li>
-							<li>ETag - entity tag; soft/weak identifier for entity; conditional request</li>
-							<li>location - redirection (eg. other methods)</li>
-							<li>proxy-authenticate - enable authorization/authentication with HTML</li>
-							<li>WWW-authenticate</li>
-							<li>retry-after - can't serve now, try again later on</li>
-							<li>server - use indicate information about the server</li>
-							<li>vary</li>
-						</ul>
-						<li>Entity Header Fields</li>
-						<ul>
-							<li>allow</li>
-							<li>content-encoding</li>
-							<li>content-language - request content; identify language</li>
-							<li>content-length - bytes</li>
-							<li>content-location - located the exact file</li>
-							<li>content-MD5 - deprecated; hashing algorithm </li>
-							<li>content-range - bytes 0-100; content-range = 100</li>
-							<li>content-type - text/html (kind of resource)</li>
-							<li>expires - retrieve to another content; when to end</li>
-							<li>last-modified - controlling the cache</li>
-						</ul>
-					</ul>
-				</ul>
-				<li>Conditional Header</li>
-				<ul>
-					<li>if-match</li>
-					<li>request – if-non-match: “764-567cad0823” (hex bytes long)(date/time) entity tag (identifier for entity)</li>
-					<li>condition – if-modified.since: sun, 05 feb 17 19:04:51 GMT; conditional retrieval</li>
-					<li>If-ranges(part of copy that you have = send the copy) and accept-ranges (support: partial-retrieval if)</li>
-					<li>MAX – Forward – use for tracing</li>
-					<ul>
-						<li>referrer page: reference of other sites/page</li>
-					</ul>
-					<li>Trailer encoding (TE) – end of the data; chunk or compressed</li>
-					<li>User-Agent – identity of the user and client; responsive deignl have 2 different content (mobile and web (full desktop) website)</li>
-					<li></li>
-				</ul>
-				<li>Extended Headers</li>
-				<ul>
-					<li>upgrade – insecure requests</li>
-					<li>DNT (do not track)</li>
-				</ul>
-				<li>Entity Header – content- length and content-type</li>
-				<ul>
-					<li>get – request to transfer; supported by all compliant server</li>
-					<li>head – entity not included as a response; retrieve metadata without transferring the entity itself</li>
-					<ul>
-						<li>code rot and link rot – don’t maintain your sites; link checker – read HTML File -> parse the content (web resources (eg. <link href>) -> fetch it (get: it means that exist/alive)</li>
-					</ul>
-					<li>post – resource-specific entity; submit data -> get/post</li>
-					<li>put – store the enclosed entity in the message body under the specified request URI</li>
-					<li>delete – remove the request URI</li>
-				</ul>
-			</ul>
-			<h2>HTTP Response Message</h2>
-			<ul  id='Response'>
-				<li>status line (special line)</li>
-				<ul>
-					<li>HTTP protocol version</li>
-					<li>reason phrase – descriptive</li>
-					<li>status code – case of failure (numeric)</li>	
-				</ul>
-				<li>status code</li>			
-				<ul>
-					<li>1xx (informational)</li>
-					<ul>
-						<li>100 continue</li>
-						<li>101 switching protocols – request to switch using upgrade; protocol negotiation</li>
-					</ul>
-					<li>2xx (success)</li>
-					<ul>	
-						<li>200 ok</li>
-						<li>201 created</li>
-						<li>202 accepted (not process but accepted)</li>
-						<li>203 non authoritative information</li>
-						<li>204 no content</li>
-						<li>205 reset content (submit data via POST)</li>
-						<li>206 partial content</li>
-					</ul>
-					<li>3xx (redirection) (location: )</li>
-					<ul>
-						<li>300 multiple choices – request with several version</li>
-						<li>301 moved permanently – no longer there</li>
-						<li>302 found (redirection)</li>
-						<li>303 see other (redirection)</li>
-						<li>304 not modified – conditional but has missing</li>
-						<li>305 use proxy – don’t fetch it directly</li>
-						<li>306 (unused)</li>
-						<li>307 temporary redirect</li>
-					</ul>
-					<li>4xx (client error)</li>
-					<ul>
-						<li>400 bad request</li>
-						<li>401 unauthorized (protected)</li>
-						<li>402 payment required (commercial application)</li>
-						<li>403 forbidden (not allowed to access)</li>
-						<li>404 not found (not correct request)</li>
-						<li>405 method not allowed</li>
-						<li>406 not acceptable</li>
-						<li>407 proxy authentication required</li>
-						<li>408 request timeout</li>
-						<li>409 conflict</li>
-						<li>410 gone (none)</li>
-						<li>411 length required</li>
-						<li>412 precondition failed</li>
-						<li>413 request entity too large</li>
-						<li>414 request URI too large</li>
-						<li>415 unsupported media type</li>
-						<li>416 requested range not satisfiable</li>
-						<li>417 expectation failed</li>
-						<li>426 upgrade required ( 3000 characters)</li>
-					</ul>
-					<li>5xx (server error)</li>
-					<ul>
-						<li>500 internal server error</li>
-						<li>501 not implemented</li>
-						<li>502 bad gateway (cot configure)</li>
-						<li>503 service unavailable</li>
-						<li>504 gateway time-out</li>
-						<li>505 http version not supported</li>
-					</ul>
-				</ul>
-			</ul>
-			<h2>HTTP – extensible protocol</h2>
-			<ul id='extensible'>
-				<li>basic ways (communicate to new base protocol functionality):</li>
-				<ul>
-					<li>new request method</li>
-					<li>new message header</li>
-					<li>new status code</li>
-				</ul>
-			</ul>
-		</div>
-	</body>
+<html lang = "en">
+    <head>
+        <title>HTTP AND HTTP FUNDAMENTALS</title>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+            <div class = "container-fluid">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbar-collapse">
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                    
+                    <a href="index.html" class="navbar-brand">Web Systems and Technology</a>      
+                </div>
+                <div class = "collapse navbar-collapse" id="navbar-collapse">
+                    <ul class = "nav navbar-nav">
+                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Prelim">Prelim Lessons<span class = "caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Internet&worldwideweb.html">The Internet and World Wide Web</a></li>
+                                <li><a href="HTTP.html">HTTP and HTTP Fundamentals</a></li>
+                                </ul
+                                </li>
+                        <li class = "dropdown2"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Midterm">Midterm Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JAVA Script</a></li>
+                                </ul
+                                </li>
+                        <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#">Client-side Scripting</a></li>
+                                <li><a href="#">Server-side Scripting</a></li>
+                                <li><a href="#">Web Servers and Web Clients</a></li>
+                                <li><a href="#">Web Applications</a></li>
+                                </ul
+                                </li>
+                        <li class = "active"><a href = "AboutUs.html">About Us</a>
+                    </ul> 
+                    
+                </div>
+           </div>
+        </nav>
+        
+    
+    
+    </body>
+        
 </html>
