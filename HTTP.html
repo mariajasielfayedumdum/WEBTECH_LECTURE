@@ -213,6 +213,114 @@
 						</ul>
 					</ul>
 				</ul>
+				<li>Conditional Header</li>
+				<ul>
+					<li>if-match</li>
+					<li>request – if-non-match: “764-567cad0823” (hex bytes long)(date/time) entity tag (identifier for entity)</li>
+					<li>condition – if-modified.since: sun, 05 feb 17 19:04:51 GMT; conditional retrieval</li>
+					<li>If-ranges(part of copy that you have = send the copy) and accept-ranges (support: partial-retrieval if)</li>
+					<li>MAX – Forward – use for tracing</li>
+					<ul>
+						<li>referrer page: reference of other sites/page</li>
+					</ul>
+					<li>Trailer encoding (TE) – end of the data; chunk or compressed</li>
+					<li>User-Agent – identity of the user and client; responsive deignl have 2 different content (mobile and web (full desktop) website)</li>
+					<li></li>
+				</ul>
+				<li>Extended Headers</li>
+				<ul>
+					<li>upgrade – insecure requests</li>
+					<li>DNT (do not track)</li>
+				</ul>
+				<li>Entity Header – content- length and content-type</li>
+				<ul>
+					<li>get – request to transfer; supported by all compliant server</li>
+					<li>head – entity not included as a response; retrieve metadata without transferring the entity itself</li>
+					<ul>
+						<li>code rot and link rot – don’t maintain your sites; link checker – read HTML File -> parse the content (web resources (eg. <link href>) -> fetch it (get: it means that exist/alive)</li>
+					</ul>
+					<li>post – resource-specific entity; submit data -> get/post</li>
+					<li>put – store the enclosed entity in the message body under the specified request URI</li>
+					<li>delete – remove the request URI</li>
+				</ul>
+			</ul>
+			<h2>HTTP Response Message</h2>
+			<ul  id='Response'>
+				<li>status line (special line)</li>
+				<ul>
+					<li>HTTP protocol version</li>
+					<li>reason phrase – descriptive</li>
+					<li>status code – case of failure (numeric)</li>	
+				</ul>
+				<li>status code</li>			
+				<ul>
+					<li>1xx (informational)</li>
+					<ul>
+						<li>100 continue</li>
+						<li>101 switching protocols – request to switch using upgrade; protocol negotiation</li>
+					</ul>
+					<li>2xx (success)</li>
+					<ul>	
+						<li>200 ok</li>
+						<li>201 created</li>
+						<li>202 accepted (not process but accepted)</li>
+						<li>203 non authoritative information</li>
+						<li>204 no content</li>
+						<li>205 reset content (submit data via POST)</li>
+						<li>206 partial content</li>
+					</ul>
+					<li>3xx (redirection) (location: )</li>
+					<ul>
+						<li>300 multiple choices – request with several version</li>
+						<li>301 moved permanently – no longer there</li>
+						<li>302 found (redirection)</li>
+						<li>303 see other (redirection)</li>
+						<li>304 not modified – conditional but has missing</li>
+						<li>305 use proxy – don’t fetch it directly</li>
+						<li>306 (unused)</li>
+						<li>307 temporary redirect</li>
+					</ul>
+					<li>4xx (client error)</li>
+					<ul>
+						<li>400 bad request</li>
+						<li>401 unauthorized (protected)</li>
+						<li>402 payment required (commercial application)</li>
+						<li>403 forbidden (not allowed to access)</li>
+						<li>404 not found (not correct request)</li>
+						<li>405 method not allowed</li>
+						<li>406 not acceptable</li>
+						<li>407 proxy authentication required</li>
+						<li>408 request timeout</li>
+						<li>409 conflict</li>
+						<li>410 gone (none)</li>
+						<li>411 length required</li>
+						<li>412 precondition failed</li>
+						<li>413 request entity too large</li>
+						<li>414 request URI too large</li>
+						<li>415 unsupported media type</li>
+						<li>416 requested range not satisfiable</li>
+						<li>417 expectation failed</li>
+						<li>426 upgrade required ( 3000 characters)</li>
+					</ul>
+					<li>5xx (server error)</li>
+					<ul>
+						<li>500 internal server error</li>
+						<li>501 not implemented</li>
+						<li>502 bad gateway (cot configure)</li>
+						<li>503 service unavailable</li>
+						<li>504 gateway time-out</li>
+						<li>505 http version not supported</li>
+					</ul>
+				</ul>
+			</ul>
+			<h2>HTTP – extensible protocol</h2>
+			<ul id='extensible'>
+				<li>basic ways (communicate to new base protocol functionality):</li>
+				<ul>
+					<li>new request method</li>
+					<li>new message header</li>
+					<li>new status code</li>
+				</ul>
 			</ul>
 		</div>
 	</body>
