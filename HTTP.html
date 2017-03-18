@@ -131,15 +131,89 @@
 					<li>RFC 2616 - 4236 Update Required</li>	
 				</ul>
 			</ul>
-		
-		
-			
-				
-			
-
-
-			
-
+			<h2>HTTP Protocol Version</h2>
+			<ul id='Protocol'>
+				<li>Message Headers (general, request, and/or entity header)</li>
+				<ul>
+					<li>fieldname: value</li>
+					<li>general (request and response, cache-control), request, respond, entity (payload too your message, allow) header fields </li>
+					<li>HTTP 1.1 requires at least 1 header (most request)</li>
+					<li> empty line (CRLF) - part of the structure; to end</li>
+					<li>message body aka payload (optional)</li>
+					<li>General (used by user agents), Request (server), Response (server), Entity (payment or actual body) HEADER FIELDS</li>
+					<ul>
+						<li>General Header Fields</li>
+						<ul>
+							<li>cache-control - request/response; local storage to put resources (eg. Browser, gateways); no cache, max-age = 0.</li>
+							<li>connection - establish persistent connections (eg. keep-alive timeout=5, max=100; close).</li>
+							<li>data - indicate when your transfer the resource</li>
+							<li>pragma - generic directive</li>
+							<li>transfer encoding</li>
+							<li>trailer - list of headers</li>
+							<li>upgrade - switching to a different version (eg. h2 - http v.2; h2c - https v.2) </li>
+							<li>via - walkthrough</li>
+							<li>warning - errors</li>
+						</ul>
+						<li> Request Header Fields </li>
+						<ul>
+							<li>(eg. accept, accept-charset, accept-encoding, accept-language, host)</li>
+							<ul>
+								<li>**/*; lowest priority</li>
+								<li>html, application</li>
+								<li>q = priority value; highest:1(default); lowest:0</li>
+								<li>image/webp (negotiation) = higher priority</li>
+							</ul>
+							<li>accept-language</li>
+							<ul>
+								<li>en-US, en; q=0.8, es; q=0.6</li>
+								<li>setting -> advance setting -> language and input setting</li>
+								<li>language information by the agent</li>
+							</ul>
+							<li>accept-encoding</li>
+							<ul>
+								<li>concept length = 1893 bytes resource</li>
+								<li>none, compressed html (decompressed to be actual html)</li>
+								<li>gzip, deflate, sdch (can handle)</li>
+								<li>vary - response header</li>
+							</ul>
+							<li>authorization - authorize user can access; www.authentic; if not authorized: 401</li>
+							<li>proxy-authentication</li>
+							<li>expect</li>
+							<ul>
+								<li>2 face operation</li>
+								<li>content length (send) -> expect: 100 continue ->  100 continue/417 expectation failed</li>
+							</ul>
+							<li>from - contact address of the user generating to request</li>
+							<li>host - required from HTTP 1.1; dedicated hosting: 1.1; shared virtual hosting: 1:m</li>
+						</ul>
+						<li>Response Header Field</li>
+						<ul>
+							<li>accept - range</li>
+							<li>age - age of the response; cache resource to particular age</li>
+							<li>ETag - entity tag; soft/weak identifier for entity; conditional request</li>
+							<li>location - redirection (eg. other methods)</li>
+							<li>proxy-authenticate - enable authorization/authentication with HTML</li>
+							<li>WWW-authenticate</li>
+							<li>retry-after - can't serve now, try again later on</li>
+							<li>server - use indicate information about the server</li>
+							<li>vary</li>
+						</ul>
+						<li>Entity Header Fields</li>
+						<ul>
+							<li>allow</li>
+							<li>content-encoding</li>
+							<li>content-language - request content; identify language</li>
+							<li>content-length - bytes</li>
+							<li>content-location - located the exact file</li>
+							<li>content-MD5 - deprecated; hashing algorithm </li>
+							<li>content-range - bytes 0-100; content-range = 100</li>
+							<li>content-type - text/html (kind of resource)</li>
+							<li>expires - retrieve to another content; when to end</li>
+							<li>last-modified - controlling the cache</li>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
 		</div>
 	</body>
 </html>
