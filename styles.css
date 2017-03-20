@@ -102,16 +102,19 @@ footer{}
 	margin-top: 3%;
 	padding-bottom: 1%;
 	font-size: 290%;
+	margin-left: 4%;
 }
 .jumbotron .internet p{
 	font-family: kurale;
 	font-size: 140%;
-	margin-left: 3%;
+	margin-left: 6%;
 }
 .jumbotron .internet h3{
 	font-family: special elite;
 	margin-left: 1%;
 	padding-top: 1%;
+	margin-left: 4%;
+	font-size: 130%;
 }
 .jumbotron .www h2{
 	font-family: great vibes;
