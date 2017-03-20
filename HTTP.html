@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
+		<link href="https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Cinzel+Decorative|Corben|Dancing+Script|Galindo|Gentium+Book+Basic|Great+Vibes|Henny+Penny|Indie+Flower|Kaushan+Script|Kurale|Life+Savers|Love+Ya+Like+A+Sister|Milonga|Miltonian+Tattoo|Niconne|Oregano|Original+Surfer|Pangolin|Parisienne|Philosopher|Princess+Sofia|Rancho|Risque|Salsa|Schoolbell|Special+Elite" rel="stylesheet">
+		<link rel="stylesheet" media="screen" href="styles.css" />
+	</head>
     <body>
         <nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
             <div class = "container-fluid">
@@ -33,7 +35,7 @@
                              <ul class="dropdown-menu">
                                 <li><a href="#">HTML</a></li>
                                 <li><a href="#">CSS</a></li>
-                                <li><a href="#">JAVA Script</a></li>
+                                <li><a href="#">Javascript</a></li>
                                 </ul
                                 </li>
                         <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
@@ -44,15 +46,21 @@
                                 <li><a href="#">Web Applications</a></li>
                                 </ul
                                 </li>
-                        <li class = "active"><a href = "AboutUs.html">About Us</a>
+								<li><a href = "glossaries.html">Glossary</a></li>
+                        <li><a href = "AboutUs.html">About Us</a></li>
                     </ul> 
                     
                 </div>
            </div>
         </nav>
-        <div class = "jumbotron">   
+		<div class="arrowup" id="arrow" >
+		<a href = "#start" >
+		<img src = "images/arrow.png" alt="arrow">
+		</a>
+	</div>
+        <div class = "jumbotron" id = "start">   
             <div class = "container">
-                <h2>Hypertext Transfer Protocol (HTTP)</h2>
+                <h2>Hypertext Transfer Protocol <span class="acronym" >(HTTP)</span></h2>
                 <ul class = "list-inline" id='HTTP'>
                     <li>application layer communication protocol used to access and used primarily to retrieve hypertext (on hypermedia) documents and resources on the World Wide Web</li>
 					<li>Jointly developed by the W3C and the IETF</li>
@@ -79,9 +87,9 @@
                 </ul>
             </div>
         </div> 
-        <div class = "container">
+        <div class = "containertwo">
             <h2>HTTP(unsecure) Fundamentals</h2>
-            <ul class = "list-inline" id='Fundamentals'>
+            <ul class = "list-inline" id="Fundamentals">
                 <li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
 				<li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
 				<ul>
@@ -92,15 +100,16 @@
 					 <li>(optional) scheme-specific parameters</li>
 					 <li>(optional) URL-encoded query</li>
 					 <li>(optional) bookmark (or fragment identifier)</li>
-					 <img src="../WEBTECH_LECTURE-master/URL example.png" alt=""/>
 				</ul>
+				<ul>
                 <li>uses a request-response standard protocol</li>
                 <li>the client sends an HTTP request message to the server</li>
                 <li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
                 <li>is a stateless communications protocol</li>
                 <li>server do not keep information from client in-between</li>
                 <li>server send a requests and forget about it</li>
-                <li>based on a client-server architecture<li>
+                <li>based on a client-server architecture</li>
+				</ul>
                 <ul>
                     <li>clients a.k.a user agents (ua)</li>
                     <ul>
@@ -167,11 +176,11 @@
                 </ul>
             </div>
         </div>
-        <div class = "container">
+        <div class = "containerthree">
             <h2>HTTP Request Message</h2>
                 <ul class="list-inline" id='RequestMsg'>
                     <li>Request line (CRLF - carriage return line feed  - terminated line)</li>
-                    <li>Method</li>
+                    <p>Methods:</p>
                     <ul>
                         <li>Standard Method</li>
                         <ul>
@@ -314,7 +323,7 @@
 				</ul>
 			</div>
 		</div>  
-        <div class = "container">
+        <div class = "containerthree">
             <h2>HTTP Response Message</h2>
             <ul class="list-inline"  id='Response'>
                 <li>status line (special line)</li>
@@ -323,7 +332,7 @@
                     <li>reason phrase – descriptive</li>
                     <li>status code – case of failure (numeric)</li>    
                 </ul>
-                <li>status code</li>            
+                <p>Status Code</p>            
                 <ul>
                     <li>1xx (informational)</li>
                     <ul>
