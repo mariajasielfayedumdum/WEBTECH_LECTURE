@@ -1,0 +1,53 @@
+<div class = "jumbotron" id = "start">   
+            <div class = "container">
+                <h2>Hypertext Markup Lanugage <span class="acronym" >(HTML)</span></h2>
+                <ul class = "list-inline" id='HTML'>
+                    <li>Language used to markup documents (i.e.) in the WWW Structure</li>
+					<ul>
+                        <li>Structure (and content)</li>
+						<li> Presentation (mostly deprecated in favor of style sheets) </li>
+                    </ul>
+					<li>Version</li>
+                    <ul>
+                        <li>HTML 2.0, 3.2. 4.0</li>
+						<li> HTML 4.01 </li>
+						<ul>
+							<li>Strict - deprecated</li>
+							<li>Traditional - still use the deprecated</li>
+							<li> Frameset - using frames </li>
+						</ul>
+						<li> HTML 5 (working draft) </li>
+                    </ul>
+					<li>Head</li>
+					<ul>
+                        <li>title, base, link, meta, style, script</li>
+                    </ul>
+					<li>Body</li>
+					<ul>
+                        <li>Grouping elements (div, span)</li>
+						<li> Headings (h1 -h6) </li>
+						<li> Paragraphs, line breaks, horizontal rules (p, br, hr) </li>
+						<li> Lists (ul, ol, li, dl, dt, dd, dir, menu) </li>
+						<li> Tables (table, th, tr, td, thead, tfoot, tbody, colgroup, col) </li>
+						<li> Structured text </li>
+						<ul>
+							<li>Phrase elements (em, strong, dfn, code, samp, kbd, var, cite, abbr, acronym)</li>
+							<li> Quotations (blockquote, q) </li>
+							<li> Subscripts and superscripts (sub, sup) </li>
+							<li> Preformatted texts (pre)</li>
+						</ul>
+						<li> Font styles (tt, i, b, big, small, strike, s, u, font, basefont, center) </li>
+						<li> Document changes (ins, del) </li>
+						<li> Links and anchors (a)</li>
+						<li> Objects, images, applets (object, img, param, applet) </li>
+						<li> Scripts (script, noscript) </li>
+						<li> Miscellaneous (address, bdo) </li>
+						<li> Frames, noframes, iframe </li>
+						<li> Frameset (for frameset DTD) </li>
+						
+                    </ul>
+					
+                  
+                </ul>
+            </div>
+        </div> 
