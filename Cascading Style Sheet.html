@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title>HTTP AND HTTP FUNDAMENTALS</title>
+        <title>Cascading Style Sheet</title>
         <meta charset="utf-8">
         <meta name ="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -243,7 +243,109 @@
 							</ul>
  
 								
-	 </div> 
+	 				</div>
+					<div class = "jumbotron">
+						<div class = "container">
+							<h2>CSS Rule Precedence</h2>
+							<ul>
+								<li>Cascading</li>
+								<ul>
+									<li>By origin and importance</li>
+									<ul>
+										<li>User agent important declaration</li>
+										<li>User important declarations</li>
+										<li>Author important declarations</li>
+										<li>Author normal declarations</li>
+										<li>User normal declarations</li>
+										<li>User agent normal declarations</li>
+									</ul>
+									<li>By specificity</li>
+									<ul>
+										<li>Inline-style</li>
+										<li>Number of ID selectors</li>
+										<li>Number of class selectors, attribute selectors and pseudo classes</li>
+										<li>Number of type selectors and pseudo elements</li>
+									</ul>
+									<li>By order</li>
+									<ul>
+										<li>The last is given the priority</li>
+									</ul>
+								</ul>
+								<li>Id value</li>
+								<ul>
+									<li>is unique and important</li>
+								</ul>
+								<li>Pseudo class </li>
+								<ul>
+									<li>ex. first-child</li>
+								</ul>
+								<li>Pseudo elements</li>
+								<ul>
+									<li>ex. before, after</li>
+								</ul>
+								<li>Type selectors </li>
+								<ul>
+									<li>ex. p</li>
+								</ul>
+							</ul>
+							</div>
+					</div>
+						<div class = "jumbotron" id = "Declarations">
+							<div class = "container">
+							<h2>CSS Declarations</h2>
+							<ul>
+								<li>Properties</li>
+								<ul>
+									<li>Value</li>
+									<ul>
+										<li>Numbers</li>
+										<li>Keywords</li>
+										<li>Dimensions</li>
+										<ul>
+											<li>Length, angle, duration, frequency, resolution</li>
+											<li>Length units</li>
+											<ul>
+												<li>Font-relative: em, ex, ch, rem</li>
+												<li>Viewport-percentage: vm, vh, vmin, vmax</li>
+												<li>Absolute lengths: cm, mm, q, in, pt, pc, px</li>
+											</ul>
+											<li>Angle units: deg, grad, rad, turn</li>
+											<li>Duration units: s, ms</li>
+											<li></li>
+											<li></li>
+										</ul>
+										<li>Percentage</li>
+										<li>URL's and URI's</li>
+										<li>Strings</li>
+										<li>Color</li>
+										<li>Functions: calc(), attr(), counter(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate() etc.</li>
+									</ul>
+								</ul>
+							</ul>
+							</div>		
+						</div>
+						<div class = "jumbotron">
+						<div class = "container">
+						<h2>CSS Preprocessor</h2>
+							<ul>
+								<li>SaaS</li>
+								<li>Less</li>
+								<li>960 Grind System</li>
+								<li>Bootstrap</li>
+								<li>Foundation</li>
+								<li>Materialize</li>
+							</ul>
+						</div>
+						</div>
+						<div class = "jumbotron" id = "Declarations">
+							<div class = "container">
+							<h2>CSS Framework</h2>
+							<ul>
+								<li>Bootstrap</li>
+								<li>Materialize</li>
+							</ul>
+							</div>
+						</div> 
     </body>
         
 </html>
