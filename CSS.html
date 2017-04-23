@@ -1,0 +1,297 @@
+<HTML>
+<HEAD>
+	<title>Cascading Style Sheet</title>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Cinzel+Decorative|Corben|Dancing+Script|Galindo|Gentium+Book+Basic|Great+Vibes|Henny+Penny|Indie+Flower|Kaushan+Script|Kurale|Life+Savers|Love+Ya+Like+A+Sister|Milonga|Miltonian+Tattoo|Niconne|Oregano|Original+Surfer|Pangolin|Parisienne|Philosopher|Princess+Sofia|Rancho|Risque|Salsa|Schoolbell|Special+Elite" rel="stylesheet">
+		<link rel="stylesheet" media="screen" href="styles.css" />
+</HEAD>
+<BODY>
+	<nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+            <div class = "container-fluid">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbar-collapse">
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                    
+                    <a href="index.html" class="navbar-brand">Web Systems and Technology</a>      
+                </div>
+                <div class = "collapse navbar-collapse" id="navbar-collapse">
+                    <ul class = "nav navbar-nav">
+                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Prelim">Prelim Lessons<span class = "caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Internet&worldwideweb.html">The Internet and World Wide Web</a></li>
+                                <li><a href="HTTP.html">HTTP and HTTP Fundamentals</a></li>
+                                </ul
+                                </li>
+                        <li class = "dropdown2"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Midterm">Midterm Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">Javascript</a></li>
+                                </ul
+                                </li>
+                        <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#">Client-side Scripting</a></li>
+                                <li><a href="#">Server-side Scripting</a></li>
+                                <li><a href="#">Web Servers and Web Clients</a></li>
+                                <li><a href="#">Web Applications</a></li>
+                                </ul
+                                </li>
+								<li><a href = "glossaries.html">Glossary</a></li>
+                        <li><a href = "AboutUs.html">About Us</a></li>
+                    </ul> 
+                    
+                </div>
+           </div>
+        </nav>
+
+        <div class="arrowup" id="arrow" >
+			<a href = "#start" >
+				<img src = "images/arrow.png" alt="arrow">
+			</a>
+		</div>
+
+		<div class = "jumbotron" id = "start">
+			<div class = "container">
+				<h1>Cascading Style Sheet<span class="acronym" >(CSS)</span></h1>
+				<ul class = "list-inline" id='CSS'>
+					<li>Cascading Styles Sheet are stylesheet language that used to denote the presentation of a HTML or XML document. CSS describes how elements should display on screen or on other media. It is Developed by Wium Lee and Bert Boss in 1996.</li>
+				</ul>
+
+				<h2>Hakon Wium Lie</h2>
+				<ul>
+					<li>He is a Norwegian activist and web pioneer that is best known for proposing the concept of Cascading Style Sheet while working with Tim Berners – Lee and Robert Cailliau at CERN in 1994.</li>
+				</ul>
+				<h2>Bert Boss</h2>
+				<ul>
+					<li>Co-creator and Co-author  of CSS 1 </li>
+				</ul>
+			</div>
+		</div>
+		<div class = "container">
+			<h2>CSS Version</h2>
+			<ul class = "list-inline" id='Versions'>
+				<li>CSS 1</li>
+				<ul>
+                    <li>Level  of 1 cascading style sheet mechanism</li>
+                    <li>Released on December 17, 1996 </li>
+					<li> Now Obsolete </li>
+                </ul>
+				<li>CSS 2.0</li>
+				<ul>
+					<li> Developed by W3c </li>
+					<li> Released in May 1998 </li>
+					<li> Capabilities like absolute type of coding </li>
+				</ul>
+				<li>CSS 2.1</li>
+				<ul>
+					<li> Removes poorly supported and not fully interoperable features in CSS 2.0 </li>
+					<li> Adds already implemented browser extensions </li>
+					<li> Released on June 7, 2011 </li>
+				</ul>
+				<li>CSS 3</li>
+				<ul>
+					<li> Divided into several documents called modules </li>
+					<li> Modules has its own capabilities or extends features defined in CSS 2 </li>
+					<li> Released on June 19,2012
+				</ul>
+			</ul>
+		</div>
+		<div class = "jumbotron" id = "start">
+			<div class = "container">
+				<h2>CSS Statements</h2>
+				<ul class = "list-inline" id='Statements'>
+					<li>CSS Selectors</li>
+					<ul>
+						<li>use to select elements.</li>
+					</ul>
+					<li>Selector syntax</li>
+					<ul>
+						<li>Simple selectors</li>
+						<ul>
+							<li>Type selector</li>
+							<li>Universal selector</li>
+							<li>Attribute selector</li>
+							<li>Class selector</li>
+							<li>ID selector</li>
+							<li>Pseudo class</li>
+							<ul>
+								<li>Dynamic pseudo class</li>
+								<li>Link pseudo class</li>
+								<ul>
+									<li>:link</li>
+									<li>:visited</li>
+								</ul>
+								<li>User action pseudo class</li>
+								<ul>
+									<li>:hover</li>
+									<li>:active</li>
+									<li>:focus</li>
+								</ul>
+								<li>Target pseudo class</li>
+								<ul>
+									<li>:target</li>
+								</ul>
+								<li>Language</li>
+								<ul>
+									<li>:lang()</li>
+								</ul>
+								<li>UI element state</li>
+								<ul>
+									<li>:enabled</li>
+									<li>:disabled</li>
+									<li>:checked</li>
+									<li>:indeterminate</li>
+								</ul>
+								<li>Structural pseudo class</li>
+								<ul>
+									<li>:root</li>
+									<li>:first-child</li>
+									<li>:last-child</li>
+									<li>:only-child</li>
+									<li>:nth-child()</li>
+									<li>:nth-last-child()</li>
+									<li>:first-of-type</li>
+									<li>:last-of-type</li>
+									<li>:only-of-type</li>
+									<li>:nth-of-type()</li>
+									<li>:nth-last-of-type()</li>
+									<li>:empty</li>
+								</ul>
+								<li>Negation pseudo class</li>
+							</ul>
+						</ul>
+						<li>Type selectors</li>
+						<li>Group selector</li>
+						<li>Combinators</li>
+						<ul>
+							<li>Decendant combinatory</li>
+							<li>Child combinatory </li>
+							<li>Sibling combinatory</li>
+							<ul>
+								<li>Adjacent sibling combinatory (+)</li>
+								<li>General sibling combinatory (-)</li>
+							</ul>
+							<li>Pseudo Elements</li>
+							<ul>
+								<li>::first-letter, :first-letter</li>
+								<li>::first-line, :first-line</li>
+								<li>::before, :before</li>
+								<li>::after, :after</li>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div class = "container">
+		<h2>CSS Rule Precedence</h2>
+		<ul>
+			<li>Cascading</li>
+			<ul>
+				<li>By origin and importance</li>
+				<ul>
+					<li>User agent important declaration</li>
+					<li>User important declarations</li>
+					<li>Author important declarations</li>
+					<li>Author normal declarations</li>
+					<li>User normal declarations</li>
+					<li>User agent normal declarations</li>
+				</ul>
+				<li>By specificity</li>
+				<ul>
+					<li>Inline-style</li>
+					<li>Number of ID selectors</li>
+					<li>Number of class selectors, attribute selectors and pseudo classes</li>
+					<li>Number of type selectors and pseudo elements</li>
+				</ul>
+				<li>By order</li>
+				<ul>
+					<li>The last is given the priority</li>
+				</ul>
+			</ul>
+			<li>Id value</li>
+			<ul>
+				<li>is unique and important</li>
+			</ul>
+			<li>Pseudo class </li>
+			<ul>
+				<li>ex. first-child</li>
+			</ul>
+			<li>Pseudo elements</li>
+			<ul>
+				<li>ex. before, after</li>
+			</ul>
+			<li>Type selectors </li>
+			<ul>
+				<li>ex. p</li>
+			</ul>
+		</ul>
+			
+		</div>
+		<div class = "jumbotron" id = "Declarations">
+			<div class = "container">
+			<h2>CSS Declarations</h2>
+			<ul>
+				<li>Properties</li>
+				<ul>
+					<li>Value</li>
+					<ul>
+						<li>Numbers</li>
+						<li>Keywords</li>
+						<li>Dimensions</li>
+						<ul>
+							<li>Length, angle, duration, frequency, resolution</li>
+							<li>Length units</li>
+							<ul>
+								<li>Font-relative: em, ex, ch, rem</li>
+								<li>Viewport-percentage: vm, vh, vmin, vmax</li>
+								<li>Absolute lengths: cm, mm, q, in, pt, pc, px</li>
+							</ul>
+							<li>Angle units: deg, grad, rad, turn</li>
+							<li>Duration units: s, ms</li>
+							<li></li>
+							<li></li>
+						</ul>
+						<li>Percentage</li>
+						<li>URL's and URI's</li>
+						<li>Strings</li>
+						<li>Color</li>
+						<li>Functions: calc(), attr(), counter(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate() etc.</li>
+					</ul>
+				</ul>
+			</ul>
+			</div>		
+		</div>
+		<div class = "container">
+		<h2>CSS Preprocessor</h2>
+		<ul>
+			<li>SaaS</li>
+			<li>Less</li>
+			<li>960 Grind System</li>
+			<li>Bootstrap</li>
+			<li>Foundation</li>
+			<li>Materialize</li>
+		</ul>
+		</div>
+		<div class = "jumbotron" id = "Declarations">
+			<div class = "container">
+			<h2>CSS Framework</h2>
+			<ul>
+				<li>Bootstrap</li>
+				<li>Materialize</li>
+			</ul>
+			</div>
+		</div>
+
+	
+</BODY>
+</HTML>
