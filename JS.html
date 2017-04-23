@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Javascript (Client-side Scripting)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Cinzel+Decorative|Corben|Dancing+Script|Galindo|Gentium+Book+Basic|Great+Vibes|Henny+Penny|Indie+Flower|Kaushan+Script|Kurale|Life+Savers|Love+Ya+Like+A+Sister|Milonga|Miltonian+Tattoo|Niconne|Oregano|Original+Surfer|Pangolin|Parisienne|Philosopher|Princess+Sofia|Rancho|Risque|Salsa|Schoolbell|Special+Elite" rel="stylesheet">
+	<link rel="stylesheet" media="screen" href="styles.css" /> </head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Web Systems and Technology</a> </div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#Prelim">Prelim Lessons<span class = "caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="Internet&worldwideweb.html">The Internet and World Wide Web</a> </li>
+							<li><a href="HTTP.html">HTTP and HTTP Fundamentals</a> </li>
+						</ul>
+					</li>
+					<li class="dropdown2"><a class="dropdown-toggle" data-toggle="dropdown" href="#Midterm">Midterm Lessons<span class = "caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="HTML.html">HTML</a> </li>
+							<li><a href="#">CSS</a> </li>
+							<li><a href="#">Javascript / Client-side Scripting</a> </li>
+						</ul>
+					</li>
+					<li class="dropdown3"><a class="dropdown-toggle" data-toggle="dropdown" href="#Finals">Final Lessons<span class = "caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Server-side Scripting</a> </li>
+							<li><a href="#">Web Servers and Web Clients</a> </li>
+							<li><a href="#">Web Applications</a> </li>
+						</ul </li>
+						<li><a href="glossaries.html">Glossary</a> </li>
+						<li><a href="AboutUs.html">About Us</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="arrowup" id="arrow">
+		<a href="#start"> <img src="images/arrow.png" alt="arrow"> </a>
+	</div>
+	<div class="jumbotron" id="start">
+		<div class="container">
+			<h2>Javascript</h2>
+			<ul class="list-inline" id='HTML'>
+				<ul>
+				<li> Developed circa 1995 by Brendan Eich  at Netscape Communications as the scripting language for the Netscape Navigator Browser</li>
+				</ul>
+				<ul>
+				<li>Formerly called Mocha, then LiveScript, then JavaScript</li>
+				</ul>
+				<ul>
+				<li>Standardized by ECMA International as ECMAScript</li>
+				</ul>
+				<ul>
+				<li>Latest version: JavaScipt 1.8.1, ECMAScript 5 [ECMA-262 5th Edition]</li>
+				</ul>
+				<ul>
+				<li>Common version: JavaScript 1.5, Jscript 5.5, ECMAScript v3 [ECMA-262 3rd Edition]</li>
+				</ul>
+				<ul>
+					<li>JavaScript Frameworks:</li>
+					<ul>
+						<li>script.aculo.us, JQuery, MooTools, Prototype,  Dojo Toolkit, etc.</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>Linked/Embedded in web pages using the script element</li>
+					<ul>
+						<li>Linked: <br>
+						script type="text/javascript" src="scripts.js" </li>
+						<li>Embedded (either in the head or the body element): <br>
+						script type="text/javascript" <br>
+						...<br>
+						noscript
+						</li>
+					</ul>
+				</ul>
+				<ul>
+				<li>Javascript + DOM/BOM + CSS + XHTML = DHTML</li>
+				</ul>
+				<ul>
+					<li>Javascript code in XHTML pages can be executed "on the fly" as the document is rendered (i.e. code outside of functions executes as the script element is encountered); in most cases though, Javascript code is executed in response to document events (e.g. clicking a page element).</li>
+				</ul>
+				<ul>
+					<li>Basic language features:</li>
+					<ul>
+						<li>Paradigm:</li>
+						<ul>
+							<li>Object-oriented (prototype-based), functional, imperative scripting language</li>
+						</ul>
+						<li>Java / C-like syntax:</li>
+						<ul>
+							<li>Implicit semicolon insertion for statement termination</li>
+							<li>Identifiers are alphanumeric, _, and $ characters</li>
+							<li>Single-line (//) or (/**/) comments</li>
+						</ul>
+						<li>Type system and variable scoping rules:</li>
+						<ul>
+							<li>Dynamic (aka loose or weak) typing</li>
+							<li>Global (aka top-level) or local scopes</li>
+							<li>Data types:</li>
+							<ul>
+								<li>Primitive types:</li>
+								<ul>
+									<li>Numbers (decimal, hexadecimal notation)</li>
+									<li>Booleans (true, false)</li>
+									<li>Strings (Single or Double quote delimited)</li>
+									<li>Undefined and Null</li>
+								</ul>
+								<li>Composite (object) types:</li>
+								<ul>
+									<li>Core Javascript Objects:</li>
+									<li>Primitive types:</li>
+									<ul>
+										<li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
+										<li>Arrays (Array)</li>
+										<li>Functions (Function, Arguments)</li>
+									</ul>
+									<li>DOM Objects</li>
+									<ul>
+										<li>Anchor, Applet, Attr, Comment, DOMException, DOMImplementation, Document Fragmenet, Element, Event, Form, Image, Input, Layer, Link, Node, Option, Select, Style, Text, Textarea</li>
+									</ul>
+								</ul>
+							</ul>
+							<li>Keywords</li>
+							<ul>
+								<li>break, case, catch, continue, default, delet, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, with</li>
+							</ul>
+							<li>Reserved words (currently unused)</li>
+							<ul>
+								<li>abstract, boolean, byte, char, class, const, debugger, float</li>
+							</ul>
+							<li>Statements and control structures</li>
+							<ul>
+								<li>var</li>
+								<ul>
+									<li>Used to declare global/local scoped variables</li>
+								</ul>
+								<li>if-else</li>
+								<ul>
+									<li>Condition expressions having values of o, "", null, and undefined evaluate to false</li>
+								</ul>
+								<li>switch-case-default-break</li>
+								<ul>
+									<li>allows any expression type to be used as the switch expression</li>
+									<li>case labels may be of different types</li>
+									<li>case labels may be expressions</li>
+									<li>case execution fails-through, unless terminated by a break</li>
+								</ul>
+								<li>while, do-while, for, for-in, break, continue</li>
+								<ul>
+									<li>for while and do-while, false condition expressions similar to if-else</li>
+									<li>for-in used for property enumeration</li>
+									<li>allows labeled break/continue</li>
+								</ul>
+								<li>try-catch-finally, throw</li>
+								<ul>
+									<li>throw and catch  can handle any expression type</li>
+								</ul>
+								<li>function, return</li>
+								<ul>
+									<li>Javascript functions are similar to Java method except for the following differences</li>
+									<ul>
+										<li>No return value type is specified, and return is optional</li>
+										<li>Functions may return a value on one invocation and not return a value (i.e. have an undefined return value) on another invocation</li>
+										<li>Functions may return different types of values on different invocations</li>
+										<li>Functions can be invoked with an arbitrary number of arguments, regardless of the actual parameters specified in the function definition (the Arguments object can be used to access unnamed arguments passed to the function invocation)</li>
+										<li>Functions are first-class objects</li>
+									</ul>
+									<li>with</li>
+									<ul>
+										<li>Used to access object properties without having expicitly qualify the property with the object name(serves as shorthand notation for accessing object properties, at the expense of program readability).</li>
+									</ul>
+								</ul>
+							</ul>
+						</ul>
+					</ul>
+					
+				</ul>
+					
+		</div>
+	</div>
+	
+</body>
+
+</html>
