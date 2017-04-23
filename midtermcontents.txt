@@ -1,0 +1,211 @@
+Web Systems and Technologies (midterm notes)
+- HTML (Hypertext Mark Up Language)
+- to create web pages
+- document; contains some information
+- that is formatted in a special way
+- several aspects
+- divide into paragraph (eg. List, Contains, Structure)
+- web page cover by HTML
+- structure and content
+- statistics, storing
+- markup the structure and the content
+- aesthetics/presentational aspects
+- not modern practice
+- not use in today’s generation
+- (eg <h1> Hello </h1>)
+- behavioral aspect
+- earlier age – static resource; look at the information, done.
+- today – there is interaction
+- CSWS (Client-Side Web Scripting)
+- JS (Java Scripting)
+- Tim Berners-Lee
+- father of the web
+- HTML Versions
+- HTML 1.0 – first version
+- HTML 2.0 – embodied to a technical document
+- RFC 1866 Nov 1995 – W3C (world wide web consortium) (same year) :
+organized by IETF (internet engineering task force)
+- HTML 3.0 – W3C Recommendation
+- HTML 3.2
+- HTML 4.0 – December 1997
+- HTML 4.01 – December 24 1999
+- 3 Different Variant (strict version)
+- Strict – mix of presentation and structure
+- Transitional – transition to new practice
+- Frameset – multiple frames (depreciated)
+- stop HTML and introduce XHTML (extensible hypertext markup
+language)
+- HTML 5 – 2014
+- XMTML and flexible syntax
+- HTML 5.1 – November 2016
+- specs
+- Ian Hickson (started)
+- HTML 5.2 – ongoing
+- XHTML 1.0 – January 26 2000
+- reformulation of HTML in XHTML
+- markup data not web pages
+- rules are very strict
+- deprecated – don’t use it anymore
+- rules..
+- <input disabled>
+- values
+- have beginning <p> and ending </p>
+- case sensitive – limits the connect
+- documents must be well form
+- camel case only (non case sensitive)
+- attribute values must always be open
+- end tag is require
+- WHATWG (web hypertext application technology working group)
+- 2005 – 2006
+- Ian Hickson – works for google
+- started the new version of HTML
+- 2012 issue to standardize as root
+- typical structure of a webpage (empty element)
+<!DOCTYPE html>
+<html lang = “en”> - html element, root
+<head> - start of the CHILDREN
+<meta charset = “UTF-8”> - empty: no content; information of data
+<title> </title> - author, keyword, title of the document
+</head> - end of the CHILDREN
+<body> - actual content to be seen by the user/client
+<p>
+<a href = “link”> - <a> beginning/start tag – href attribute/tag name
+“link” content/value - </a> end tag
+</a>
+</p>
+<img src = “” alt = “”>
+<!—comment -- > - to insert a comment
+</body>
+</html>
+- p element (paragraph)
+flow
+InteractivePhrasing
+embed
+heading
+sectioning
+- heading – h1, h2, h3
+- sectioning
+- phrasing – u, var, bdo, canvas, video
+- flow content
+- content model : phrasing content
+- tag omission in text/html : A <p> element’s end tag
+- content attributes: global attributes – lang, id, hidden, dir
+- DOM interface : interface HTMLParagraphElement: HTMLElement ();
+- img element (image)
+- embedded content
+- content model: nothing (empty element)
+- tag omission: empty
+- content attributes: alt, width, height
+- DOM Interfaces:
+- HTML Elements:
+- html (root element)
+- head (child)
+- title – title
+- base – relative
+- link – different resource (eg stylesheet)
+- meta – other meta info (eg keywords, author tool)
+- style – embedding
+- body (child)
+- article, aside, nav, section
+- header, footer
+- main (main content)
+- address (contact information)
+- div (generic section content)
+- h1, h2, h3, h4, h5, h6 – sub-heading
+ - main heading
+- p (paragraph)
+- hr (horizontal line) – hematic break: theme break
+- pre (preformed text) – preserved: white space, new line
+- blockquote: quotation (q) , citation (cite)
+- list: ol (ordered), ul (unordered), li (list); (eg <ol start = 10>
+- description list (dl) : dt (term), dd (actual)
+- figure: figcaption
+- a (anchor)
+- em, strong (emphasize), small, s (side comment), (obsolete text)
+- cite, q
+- defining instant: dfn, abbr (abbreviation)
+- ruby, rb, rt, rtc, rp
+- data, time (information/code)
+- code, var, samp, kbd (embedding computer code)
+- superscript (sup), subscript (sub)
+- i (italize), b (bold), u (underline) – depreciated element; 401 strict, mark
+- by directional text: bdi, bdo
+- text level division: span
+- break opportunity: br, wbr
+- news, documents edit: ins, del
+- table: table, caption, colgroup, col, +head, +body, +foot, tr, th, td
+- form: label
+- math: svg, canvas (eg snake game)
+- script, no script
+- template
+- HTML/XHTML Stylesheets
+- author styles – author of document/web development team
+- external styles – link across multiple html
+<head>
+<link rel = “stylesheet” types = “text/css” href = “style.css”>
+// <media = print (css3), screen (css3), tv, brail, projection,
+speech (css3)>
+// <title = large, normal, small font>
+// <link rel = “stylesheet”/”alternate stylesheet”>
+- embedded stylesheet – single page website
+<style type = “text/css” media = “screen and (min-width:500px;)
+body{width:90%;}
+</style>
+- inline stules
+<p style(attribute) = “border:1px solid green; color:blue;”/>
+</head>
+- user style – provided by the area; viewing the page
+- user agent styles (example default css 2.1 stylesheet for html4)
+- browser itself (default css stylesheet)
+- ResetCSS – Xss stylesheet that can link to everything
+- HTML Processor
+- HAML (Ruby), Markdown, Slim, Pug
+Ex.
+%body <body>
+%div <div>
+%p <p> hello world </p>
+Hello world </div> </body>
+* - var = “my variable” -> %h1 = var
+* %p.abc content <p id = abc > content </p>
+- CSS (Cascading Style Sheet)
+- structural markup documents
+- language used to specify the presentation aspects (eg layout and formatting) of
+structurally marked up documents
+- developed by Hakon Wium Lie (CHSS: html cascading style sheet) and Bert Bos
+(SSP: stream-based style sheet proposal)
+- versions:
+ - monolife – everything is covered in the specs
+- CSS1 – December 17 1996 revised April 11 2008
+- CSS 2.1 – June 07 2011
+- CSS3 – recommended; individual document defining each module
+- CSS Preprocessors, CSS Frameworks (eg $color: red -> body{color=$color;})
+- SASS (better ways for CSS), LESS, 960 Grid System, Bootstrap,
+Foundation, Materialize (formatting for tabs, tables), etc.
+- material design: concept introduce by Google
+- CSS Statements
+- At – Rules
+- @charset
+- @namespace
+- @import
+- @document – specific page or with given url or domain
+- @fontface – downloadable files
+- @keyframe – animation
+- @media – responsive design
+- @page
+- CSS Rule Sets (aka CSS Rules, Style Rules)
+- selector followed by brace-enclosed declaration block
+p (selector){ - target particular element
+color: #f0o;
+}
+/* ---- */ - block comment
+// - make it invalid/ improper comment
+- CSS Selector
+- Selector
+- elements in the document tree are matched
+- body ail# x>p-y[title] + span: +-before
+- condition in a CSS rule
+- match elements called the subject of the selector
+- Selector syntax
+- one or more sequences of simple selector
+- ex. body(simple) p.xyz (selector sequence) + h1[title]::before (pseudo
+element)
