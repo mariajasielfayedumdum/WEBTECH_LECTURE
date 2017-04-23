@@ -91,7 +91,7 @@
 				</ul>
 				<ul>
 					<li>Basic language features:</li>
-					<ul>
+					<ol style = "list-style-type: upper-roman">
 						<li>Paradigm:</li>
 						<ul>
 							<li>Object-oriented (prototype-based), functional, imperative scripting language</li>
@@ -107,7 +107,7 @@
 							<li>Dynamic (aka loose or weak) typing</li>
 							<li>Global (aka top-level) or local scopes</li>
 							<li>Data types:</li>
-							<ul>
+							<ol>
 								<li>Primitive types:</li>
 								<ul>
 									<li>Numbers (decimal, hexadecimal notation)</li>
@@ -119,17 +119,17 @@
 								<ul>
 									<li>Core Javascript Objects:</li>
 									<li>Primitive types:</li>
-									<ul>
+									<ol style = "list-style-type: lower-alpha">
 										<li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
 										<li>Arrays (Array)</li>
 										<li>Functions (Function, Arguments)</li>
-									</ul>
+									</ol>
 									<li>DOM Objects</li>
 									<ul>
 										<li>Anchor, Applet, Attr, Comment, DOMException, DOMImplementation, Document Fragmenet, Element, Event, Form, Image, Input, Layer, Link, Node, Option, Select, Style, Text, Textarea</li>
 									</ul>
 								</ul>
-							</ul>
+							</ol>
 							<li>Keywords</li>
 							<ul>
 								<li>break, case, catch, continue, default, delet, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, with</li>
@@ -139,7 +139,7 @@
 								<li>abstract, boolean, byte, char, class, const, debugger, float</li>
 							</ul>
 							<li>Statements and control structures</li>
-							<ul>
+							<ol>
 								<li>var</li>
 								<ul>
 									<li>Used to declare global/local scoped variables</li>
@@ -168,24 +168,160 @@
 								<li>function, return</li>
 								<ul>
 									<li>Javascript functions are similar to Java method except for the following differences</li>
-									<ul>
+									<ol style = "list-style-type: lower-alpha">
 										<li>No return value type is specified, and return is optional</li>
 										<li>Functions may return a value on one invocation and not return a value (i.e. have an undefined return value) on another invocation</li>
 										<li>Functions may return different types of values on different invocations</li>
 										<li>Functions can be invoked with an arbitrary number of arguments, regardless of the actual parameters specified in the function definition (the Arguments object can be used to access unnamed arguments passed to the function invocation)</li>
 										<li>Functions are first-class objects</li>
-									</ul>
-									<li>with</li>
+									</ol>
+								</ul>
+								<li>with</li>
 									<ul>
 										<li>Used to access object properties without having expicitly qualify the property with the object name(serves as shorthand notation for accessing object properties, at the expense of program readability).</li>
 									</ul>
-								</ul>
-							</ul>
+							</ol>
 						</ul>
-					</ul>
+					</ol>
 					
 				</ul>
-					
+				<ul>
+				<li> Asynchronous JavaScript and XML (AJAX) </li>
+					<ul>
+					<li>Synchronous Request</li>
+					<ul><li>Recommended for few small requests. 
+						JavaScript will not continue to execute, until the server response is ready. 
+						If the server is busy or slow, the application will hang or stop. </li></ul>
+						<p><br>var xhr = new XMLHttpRequest(); <br>
+							xhr.open(“GET”, “somepage.txt”, false); <br>
+							xhr.send(null); <br>
+							if(xhr.status==200){ <br>
+ 							var str = xhr.responseText; <br>} </p>
+					<li>Asynchronous Request</li>
+					<ul> <li>JavaScript does not have to wait 
+						for the server response. It can execute other scripts while waiting 
+						for server response, and deal with the response when the response is ready. </li> </ul>
+
+						<p><br>var xhr = new XMLHttpRequest(); <br>
+							xhr.open(“POST”, “products.php”, true); <br>
+							xhr.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”); <br>
+ 							<br>
+							xhr.onreadystatechange = function(){<br>
+							  if(this.readyState == 4 && this.status == 200){  <br>
+							  var hdrDate = this.getResponseHeader(“Date”);  <br>
+							  var xml = this.responseXML; } <br>} <br>
+ 							<br>
+							xhr.send(“productID=1234&catID=5678”); <br>
+						</p>
+
+					<li>Cross-Browser and Old Browser Support</li>
+					<p>var xhr; <br>
+					if(typeof XMLHttpRequest != “undefined”){ <br> xhr = new XMLHttpRequest();
+					<br> }else if (window.ActiveXObject){<br>  var activeXIDs = [“MSXML2.XmlHttp.5.0”,       “MSXML2.XmlHttp.4.0”,       “MSXML2.XmlHttp.3.0”,       “MSXML2.XmlHttp”,       “Microsoft.XmlHttp”];  <br>
+					 for(var i=0; i<activeXIDs.length;i++){ <br> try{ <br>
+					  xhr = new ActiveXObject(activeXIDs[i]);<br> }catch(e){}} }</p>
+					<li>Three important properties of the XMLHttpRequest Object</li>
+					<ul>
+					<li>onreadystatechange</li> 
+					<ul>
+					<li>Stores a function to be called automatically each time readyState changes</li> 
+					</ul>
+					<li>readyState</li>
+					<ul> 
+					<li>0 : request not initialized</li>
+					<li>1 : server connection established</li>
+					<li>2 : request received</li>
+					<li>3 : processing request</li>
+					<li>4 : request finished and response is ready o status</li>
+					<li>200 : OK</li>
+					<li>404 : Not Found</li>
+					</ul>
+					</ul>
+				</ul>
+				</ul>
+				<ul>
+				<li>Document Object Model</li>
+				<ul> 
+				<li>Document Object Collections</li>
+				<ol>
+				<li>anchors[]</li>
+				<li>forms[]</li>
+				<li>images[]</li>
+				<li>links[]</li>
+				</ol>
+				<li>Document Object Properties</li>
+				<ol> 
+				<li>cookie</li>
+				<li>documentMode</li>
+				<li>domain</li>
+				<li>lastModified</li>
+				<li>readyState</li>
+				<li>referrer</li>
+				<li>title</li>
+				<li>title</li>
+				</ol>
+				<li>Document Object Methods </li>
+				<ol>
+					<li>close()</li>
+					<li>getElementById()</li>
+					<li>getElementsByName()</li>
+					<li>getElementsByTagName()</li>
+					<li>open()</li>
+					<li>write()</li>
+					<li>writeln()</li>
+				</ol>
+				</ul>
+				 </ul>
+				<ul>
+				<li>Java EE</li>
+				<ul> 
+				<li>Java EE is an open, standards-based development and deployment platform for creating distributed, transactional, reliable, secure, multitiered, web-based, server-centric, component-based enterprise applications</li>
+				<li>Java EE Application Model</li>
+				<ol style = "list-style-type: lower-alpha"> 
+				<li>Java programming language, Java Virtual Machine (JVM)</li>
+				<li>Java EE Components</li>
+				<ul> <li>Java EE Clients </li>
+				<ul> 
+					<li>Application Clients, Applets (embedded in web clients)</li>
+				</ul>
+				<li>Web Components</li>
+				<ul>
+				<li>Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF)</li> 
+				</ul>
+				<li>Enterprise JavaBeans (EJBM)</li></ul>
+				 
+				<li>Java EE Containers</li>
+				<ul> <li>Client containers, web container, EJB container</li></ul>
+				<li>Java EE Server</li>
+				</ol>
+				<li>Java EE Web Application </li>
+				<ul>
+				<li>Collection of resources installed under a specific subset of the URL namespace of a web application server compliant with the Java EE Specification (e.g. Apache‟s Tomcat, Apache‟s Geronimo, Sun Microsystems‟ Glassfish, IBM‟s WebSphere, etc.)</li>
+				<li>Resources</li>
+				<ol style ="list-style-type: lower-alpha"> 
+				<li>Static resources: web pages, images, stylesheets, etc. (serves as is)</li>
+				<li>Dynamic resources: servlets, JSPs</li>
+				<li>Miscellaneous resources: business object classes (e.g. Java Beans, EJB), support libraries, etc.</li>
+				</ol>
+				<li>XML-formatted descriptor and configuration files</li>
+				<ul> <li>web.xml, application.xml, context.xml, etc.</li></ul>
+				<li>Organized into a standard hierarchical structure and typically packaged and deployed as WAR or EAR files</li>
+				</ul>
+				<li>Java EE APIs</li>
+				<ol style = "list-style-type: lower-alpha">
+					<li>Enterprise JavaBeans Technology</li>
+					<li>Java Servlet Technology</li>
+					<li>Java Server Pages</li>
+					<li>Java Server Pages Standard Tag Library</li>
+					<li>Java Server Faces</li>
+					<li>Java Msg Service API</li>
+					<li>Java Transaction API</li>
+					<li>JavaMail API</li>
+					<li>JavaBeans Activation Framework</li>
+					<li>Java API for XML Processing</li>
+				</ol>
+				</ul>
+				</ul>
 		</div>
 	</div>
 	
