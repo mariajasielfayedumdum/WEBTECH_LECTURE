@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<HTML lang = "en">
+<HEAD>
+	<title>Client-Side Web Scripting</title>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Cinzel+Decorative|Corben|Dancing+Script|Galindo|Gentium+Book+Basic|Great+Vibes|Henny+Penny|Indie+Flower|Kaushan+Script|Kurale|Life+Savers|Love+Ya+Like+A+Sister|Milonga|Miltonian+Tattoo|Niconne|Oregano|Original+Surfer|Pangolin|Parisienne|Philosopher|Princess+Sofia|Rancho|Risque|Salsa|Schoolbell|Special+Elite" rel="stylesheet">
+		<link rel="stylesheet" media="screen" href="styles.css" />
+</HEAD>
+<BODY>
+	<nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+            <div class = "container-fluid">
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbar-collapse">
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                    
+                    <a href="index.html" class="navbar-brand">Web Systems and Technology</a>      
+                </div>
+                <div class = "collapse navbar-collapse" id="navbar-collapse">
+                    <ul class = "nav navbar-nav">
+                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Prelim">Prelim Lessons<span class = "caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Internet&worldwideweb.html">The Internet and World Wide Web</a></li>
+                                <li><a href="HTTP.html">HTTP and HTTP Fundamentals</a></li>
+                            </ul>
+                                
+                        <li class = "dropdown2"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Midterm">Midterm Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="html.html">HTML</a></li>
+                                <li><a href="css.html">CSS</a></li>
+                                <li><a href="javaScript.html">Javascript</a></li>
+                            </ul>
+                                
+                        <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="client-side.html">Client-side Scripting</a></li>
+                                <li><a href="server-side.html">Server-side Scripting</a></li>
+                                <li><a href="#">Web Servers and Web Clients</a></li>
+                                <li><a href="#">Web Applications</a></li>
+                            </ul>
+            
+								<li><a href = "glossaries.html">Glossary</a></li>
+                        <li><a href = "AboutUs.html">About Us</a></li>
+                    </ul> 
+                    
+                </div>
+           </div>
+        </nav>
+
+        <div class="arrowup" id="arrow" >
+			<a href = "#start" >
+				<img src = "images/arrow.png" alt="arrow">
+			</a>
+		</div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h1>Client-side Scripting</h1>
+                    <ul>
+                        <li>Allows programs(i.e.scripts) to be downloaded from a web server and executed in the client environment (e.g. browser)</li>
+                        <li>Common client-side scripting technologies</li>
+                        <ul>
+                            <li>JavaScript, ECMAScript, Jscript</li>
+                            <li>VBScript, ActionScript</li>
+                            <li>Java Applets, ActiveX Controls, Flash Animations, Microsoft Silverlight, Adobe Integrated Runtime (Adobe AIR).
+                            </li>
+                        </ul>
+                    </ul>
+                <h2>Common Uses:</h2>
+                <ul>
+                    <li>Dynamic(X)HTML</li>
+                    <ul>
+                        <li>(X)HTML Page embellishments, visual “effects”, content generation and manipulation, user interaction, document and pagenavigation</li>
+                        <li>Client-side form data validation</li>
+                        <li>Asynchronous content retrieval, RIA Technologies(e.g. AJAX).</li>
+                    </ul>       
+                </ul>
+                <h2>Common Issues:</h3>
+                <ul>
+                    <li>Browse Support</li>
+                    <ul>
+                        <li>No scripting support</li>
+                        <li>Scripting disabled</li>
+                        <li>Plugin availability</li>
+                    </ul>
+                    <li>Version incompatibilities, non-standard implementations.</li>
+                    <li>Capabilities restrictions</li>
+                    <ul>
+                        <li>Scripting languages are not for general-purpose programming</li>
+                        <li>E.g javascript is restricted by the sandbox execution model and the same origin policy.</li>
+                    </ul>
+                    <li>Security Risks</li>
+                    <ul>
+                        <li>Browser implementation defects(e.g buffer overflows)</li>
+                        <li>E.g. javascript, cross-site scripting (XSS) or cross-site request forgery(XSRF)issues.</li>
+                        <li>Malicious ActiveX controls</li>
+                    </ul>
+                </ul>
+            </div>        
+        </div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h1>Javascript</h1>
+                <ul>
+                    <li>Developed circa 1995 by Brendan Eich at Netscape Communications as the scripting language for the Netscape Navigator Browser.</li>
+                    <li>Formerly called Mocha, then LiveScript, then JavaSCript</li>
+                    <li>Standardized by ECMA International as ECMAScript</li>
+                    <li>Latest Version:JavaScript 1.8.1 ECMAScript 5 [ECMA-262 5th Edition]</li>
+                    <li>Common version: Javascript 1.5, Jscript 5.5 ECMAScript v3[ECMA-263 3rd Edition]</li>
+                    <li>JavaScript Frameworks:</li>
+                    <ul>
+                        <li>script.aculo.us.jQuery.MooTools, Prototype,Dojo Toolkit,etc.</li>
+                    </ul>
+                    <li>Linked/Embedded in web pages using the 'script'    element</li>
+                    <ul>
+                        <li>Linked: script type ="text/javascript" src="scripts.js </li>
+                        <li>Embedded (either in the header or the body element</li>
+                    </ul>
+                    <li>JavaScript+DOM/BOM+CSS+(X)HTML=DHTML</li>
+                    <li>JavaScript code in (X)HTML pages can be executed "on the fly" as the document is dendered(i.e code  outside of functions executes as the script element is encountered); in most cases though, JavaScript code is executed in response to document events (e.g. clicking a page element).</li>
+                    <li>Basic language features:</li>
+                    <ul>
+                        <li>Paradigm:</li>
+                    </ul>
+                    <ul>
+                        <li>Object-oriented(prototype-based), functional, imperative scripting language</li>
+                        </ul>
+                        <li>Java-/C-like syntax</li>
+                        <ul>
+                            <li>Implicit semicolon insertion for statement termination</li>
+                            <li>Identifiers are alphanumeric,_,and $ characters</li>
+                            <li>Single-line(//) or block(/**/)comments</li>
+                        </ul>
+                    <li>Type system and variable scoping rules:</li>
+                        <ul>
+                            <li>Dynamic(aka loose or weak)typing</li>
+                            <li>Global(aka top-level) or local scopes</li>
+                            <li>Data types:</li>
+                            <li> Primitive Data types(decimal,hexadecimal notation),Booleans(true, false),Strings(Single or Double quote delimited),Undefined and Null.</li>   
+                            <li>Composite(objects) types : Core Java Script Objects(object,number,boolean,String,date)</li>
+                            <li>DOM Objects(Anchor, Applet, Attr, Comment, DOMException, DOMImplementation, DocumentFragment, Element, Event, Form, Image, Input, Layer, Link, Node, Option, Select, Style, Text, TextArea).</li>
+                    </ul>   
+                    <li>Key Words</li>
+                    <ul>
+                        <li>break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, with </li>
+                    </ul>
+                    <li>Reserved Words(currently unused)</li>
+                    <ul>
+                        <li>abstract, Boolean, byte, char, class, const, debugger, float</li>
+                    </ul>
+                    <li>Statements and control structures</li>
+                    <ul>
+                        <li>var - used to declare global/local scoped variables.</li>
+                        <li>if-else - Condition expressions having values of 0, “”, null, and undefined evaluate to false
+                        </li>
+                        <li>switch-case-default-break - allows any expression type to be used as the switch expression. Case labels may be of different types.
+                        </li>
+                        <li>Case labels may be expressions</li>
+                        <li>case execution falls-through, unless terminated by a break</li>
+                    </ul>
+                    <li>while, do-while, for, for-in, break, continue</li>
+                    <ul>
+                        <li>for while and do-while, false condition expressions similar to if-else</li>
+                        <li>for-in used for property enumeration</li>
+                        <li>allows labeled break/continue</li>
+                    </ul>
+                    <li>try-catch-finally, throw</li>
+                    <ul>
+                        <li>throw and catch can handle any expression type</li>
+                    </ul>
+                    <li>function, return:JavaScript functions are similar to Java methods except for the following differences:
+                    </li>
+                    <ul>
+                        <li>No return value type is specified, and return is optional within the function body</li>
+                        <li>No return value type is specified, and return is optional within the function body</li>
+                        <li>Functions may return a value on one invocation and not return a value (i.e. have an
+                        undefined return value) on another invocation</li>
+                        <li>Functions may return different types of values on different invocations</li>
+                        <li>Function parameters are dynamically typed</li>
+                        <li>Functions can be invoked with an arbitrary number of arguments, regardless of the actual
+                        parameters specified in the function definition (the Arguments object can be used to
+                        access unnamed arguments passed to the function invocation)</li>
+                        <li>Functions are first-class objects</li>
+                        <li>Functions can be invoked as global functions (i.e. as methods of the Global object) as methods of specific objects, or as object constructors</li>
+                    </ul>
+                    <li>with</li>
+                    <ul>
+                        <li> Used to access object properties without having to explicitly qualify the property with the object name
+                        (serves as shorthand notation for accessing object properties, at the expense of program readability).</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>Asynchronous Javascript and XML(AJAX)</h2>
+                <ul>
+                    <li>Synchronous Request</li>
+                    <ul>
+                        <li>Recommended for few small requests. JavaScript will not continue to execute, until the server response is ready. If the server is
+                        busy or slow, the application will hang or stop. var xhr = new XMLHttpRequest();
+                        xhr.open(“GET”, “somepage.txt”, false);
+                        xhr.send(null);
+                        if(xhr.status==200){
+                        var str = xhr.responseText;}
+                        </li>
+                    </ul>
+                    <li>Asynchronous Request</li>
+                    <ul>
+                        <li>JavaScript does not have to wait for the server response. It can execute other scripts while waiting for server response, and deal
+                        with the response when the response is ready.</li>
+                        <li>var xhr = new XMLHttpRequest();
+                        xhr.open(“POST”, “products.php”, true);
+                        xhr.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
+                        xhr.onreadystatechange = function(){
+                        if(this.readyState == 4 && this.status == 200){
+                        var hdrDate = this.getResponseHeader(“Date”);
+                        var xml = this.responseXML;}
+                        }xhr.send(“productID=1234&catID=5678”);</li>
+                    </ul>
+                    <li>Cross-Browser and Old Browser Support</li>
+                    <ul>
+                        <li>var xhr;
+                        <br>if (typeof XMLHttpRequest != “undefined”){
+                        <br>xhr = new XMLHttpRequest();
+                        <br>}else if (window.ActiveXObject){
+                        <br>var activeXIDs = [“MSXML2.XmlHttp.5.0”,
+                        <br>“MSXML2.XmlHttp.4.0”,
+                        <br>“MSXML2.XmlHttp.3.0”,
+                        <br>“MSXML2.XmlHttp”,
+                        <br>“Microsoft.XmlHttp”];
+                        </li>
+                    </ul>
+                    <li>Three Important properties of the XHTMLHttpRequest Object</li>
+                    <ul>
+                        <li>onreadystatechange - Stores a function to be called automatically each time readyState changes
+                        </li>
+                        <li>readyState:
+                            <br>0 : request not initialized
+                            <br>1 : server connection established
+                            <br>2 : request received
+                            <br>3 : processing request
+                            <br>4 : request finished and response is ready</li>
+                        <li>status:
+                            <br> 200 : OK
+                            <br> 404 : OK
+                        </li>
+                    </ul>
+                    <li>Document Object Model</li>
+                    <ul>
+                        <li>Document Object Collections:
+                            <br>- anchors[]
+                            <br>- forms[]
+                            <br>- images[]
+                            <br>- links[]
+                        </li>
+                    </ul>
+                    <li>Document Object Properties</li>
+                    <ul>
+                        <li>cookie</li>
+                        <li>documentMode</li>
+                        <li>domain</li>
+                        <li>lastModified</li>
+                        <li>readyState</li>
+                        <li>referrer</li>
+                        <li>title</li>
+                        <li>URL</li>
+                    </ul>
+                    <li>Document Object Methods</li>
+                    <ul>
+                        <li>close()</li>
+                        <li>getElementById()</li>
+                        <li>getElementsByName()</li>
+                        <li>getElementsByTagName()</li>
+                        <li>open()</li>
+                        <li>write()</li>
+                        <li>writeIn()</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+</BODY>
+</HTML>
