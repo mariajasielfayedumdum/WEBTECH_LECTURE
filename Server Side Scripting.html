@@ -129,11 +129,11 @@
 	<div class = "containertwo">
 		<h2> PHP<span class ="acronym"></span></h2>
 		<ul class = "list-inline" id = "">
-			<p> PHP or  Hypertext Preprocessor is a widely-used open source general-purpose scripting language that is 
-			especially suited for web development and can be embedded into HTML </p>
+			<li> PHP or  Hypertext Preprocessor is a widely-used open source general-purpose scripting language that is 
+			especially suited for web development and can be embedded into HTML </li>
 		</ul>
 		<ul class = "list-inline" id ="superglobals">
-		<h3> PHP Superglobals</h3>
+		<h2> PHP Superglobals</h2>
 			<ul>
 				<li>$GLOBALS </li>
 				<li>$_SERVER</li>
@@ -144,12 +144,333 @@
 				<li>$_SESSION </li>
 				<li>$_REQUEST</li>
 				<li>$_ENV</li>
-		
-		</ul>
-		
-		
+            </ul>
 		</div>
 	</div>
+    <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>Servlet</h2>
+                    <ul>
+                        <li>Servelets are java programs that is deployed on a server to generate a dynamic web page.
+                        </li>
+                        <li>Servelts can access the entire JAVA API library and can also access JDBC API for accessing databases</li>
+                    </ul>
+                <ul class="list-inline" id='HTML'>
+				<ul>
+				<li> Java Object based on the Servlet API.</li>
+				</ul>
+				<ul>
+				<li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most commonly used with HTTP and the term 'Servlet' is often used in the context of an "HTTP Servlet."</li>
+				</ul>
+				<ul>
+				<li>Web-tier components in the Jaa EE architecture.</li>
+				</ul>
+				<ul>
+				<li>Runs in, and is managed by, a web-tier container called the "Servlet Container".</li>
+				</ul>
+				<ul>
+				<li>Mapped to URLs which clients send requests</li>
+				</ul>
+				<ul>
+					<li>Typically asked with (among other things)</li>
+					<ul>
+						<li>Processing and/or storing data submitted via HTML forms</li>
+                        <li>Generating dynamic content</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>javax.servlet</li>
+					<ul>
+						<li>Servlet, GenericServlet</li>
+                        <li>ServletRequest, ServletResponse</li>
+						<li>ServletConfig, ServletContext</li>
+                        <li>RequestDispatcher</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>javax.servlet.http</li>
+					<ul>
+						<li>HttpServlet</li>
+                        <li>HttpServletRequest</li>
+						<li>HttpServletResponse</li>
+                        <li>HttpSession</li>
+                        <li>Cookies</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>Servlet Processing</li>
+					<ul>
+						<li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container.</li>
+                        <li>Servlet container checks if servlet is already loaded.</li>
+						<li>If it is not loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</li>
+                        <li>Servlet container invokes the servlet's service method, passing request and responses, which is returned by the servlet container to the web server, which in turn sends the reponse to the client.</li>
+                        <li>Subsequent request to the sservlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destory method.</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>init(config)</li>
+					<ul>
+						<li>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup initialization</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>service(request, response)</li>
+					<ul>
+						<li>Invoked each time the servlet is called upon to process a request (typically on a separate thread for each call)</li>
+                        <li>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g. doGet, doPost) which is typically overridden too affect the servlet's functionality.</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>Destroy()</li>
+					<ul>
+						<li>Invoked on the servlet by the servet contaainer when the servlet is to be unloaded (e.g. when the application is stopped or undeployed); can be used by servlet for clen-up processin (e.g. resource deal location)</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Request Processing(HttpServletRequest)</li>
+					<ul>
+						<li>Retriveing user-supplied request parameters</li>
+                        <li>Retriveing request header values</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Response Processing(HttpServletResponse)</li>
+					<ul>
+						<li>Setting response status code</li>
+                        <li>Setting response header</li>
+                        <li>Obtaining output object for sending the response</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Request Dispatching(RequestDispatcher)</li>
+					<ul>
+						<li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li>
+                        <ul>
+                            <li>RequestDispatcher rqstDsp;</li>
+                            <li>rqstDsp = request.getRequestDispatcher(res)</li>                    
+                        </ul>
+                        <li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included (e.g. use for banners, footers, etc.)</li>
+                        <ul>
+                            <li>rqstDsp.include(request, response)</li>                    
+                        </ul>
+                        <li>Forwards the processing of the current request to the dispatcher resource; the servlet processing th current request must not generate a response (e.g. use in MVC "Controller" servlets)</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Session Tracking(HttpSession)</li>
+					<ul>
+						<li>Session tracking support is implemented either cookies or URL-rewriting.</li>
+                        <li>Obtaining session object from the current request</li>
+                        <ul>
+                            <li>HttpSession session;</li>
+                            <li>session = request.getSession(createNew)</li>                    
+                        </ul>
+                        <li>Obtaining session information(HttpSession)</li>
+                        <ul>
+                            <li>getCreationTime(), getLAstAccessedTime(), getMaxInactiveInterval(), getId(), isNew(), setMaxInactiveInterval(int all)</li>
+                            <li>rqstDsp = request.getRequestDispatcher(res)</li>                    
+                        </ul>
+                        <ul>
+                            <li>Destroying sessions</li>
+                            <ul>
+                                <li>invalidate() - ppurge the current session</li>                        
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>URL-rewriting(HttpServletResponse)</li>
+                            <ul>
+                                <li>encodeURL(String url), encodeRedirectURL(String url)</li>                        
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>Servlet Configuration (ServletConfig)</h2>
+                    <ul>
+                        <li>getServlet(), getServletContext(), getInitParameter(), getInitParameterNames()</li>
+                    </ul>     
+            </div>
+        </div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>JSP (JAVA Server Pages)</h2>
+                    <ul>
+                        <li>A technology that lets software developers create a dynamic web content </li>
+                        <li>Simply an HTML web page that contains additional bits of code that execute application logic to generate dynamic content</li>
+                        <li>JSP Actions (JSP tags) perform a variety of functions and extend the capabilities of JSP.</li>
+                        <li>JSP Actions uses XML-like syntax, and are used to manage JavaBeans component.</li>
+                        <li>Directives are instructions that are proessesed by the JSP engine when the page is compiled to a servlet</li>
+                        <li>Directives are used to set page-level instructions (page), insert data from external files (include), and specify custom tag libraries (taglib)</li>
+                        <ul>
+                            <li>%@     %></li>
+                        </ul>
+                        <li>Motivation</li>
+                        <ul>
+                            <li>It is typically a good idea to separate business logic from presentation concern</li>
+                            <ul>
+                                <li>Allows modern web development teams to be divided up into programmers and web page authors / designers</li>
+                                <li>Fosters component reuse (e.g. the same data object can be consumed by ser agents of varying capabilities and needs)</li>
+                            </ul>
+                            <li>Servlets can be very powerful for programming business logic, but are very awkward to use when generating static (i.e. templates) content.</li>
+                            <li>(X)HTML marked-up documents are very convenient for static content generation but cannot be used to program business logic (or generate dynamic content arising from data produced by the business logic).</li>
+                        </ul>
+                        <li>Features</li>
+                        <ul>
+                            <li>Text-based document caabe of enerating both static and dynamic content (typically intermixed)</li>
+                            <li>Mark-up based document syntax (JSP-style or XML-style), combining (X)HTML elements as well as standard and custome JSP elements; thus, web page authors can feel right "at home" with the mark-up syntax.</li>
+                            <li>Embedded Java Coding support via "scriptlets"</li>
+                            <ul>
+                                <li>%     %></li>
+                            </ul>
+                            <li>Template text are converted into JSPWriter.</li>
+                        </ul>
+                        <li>Components</li>
+                        <ul>
+                            <li>Template (i.e. static) text</li>
+                            <li>JSP Elements</li>
+                            <ul>
+                                <li>Directives</li>
+                                <ul>
+                                    <li>%@ page ContentType="text/html" pageEncoding="UTF-8" %></li>
+                                    <li>%@ page import="java.util.Random" %></li>
+                                        <ul>
+                                            <li>autoFlash</li>
+                                            <li>buffer</li>
+                                            <li>contentType</li>
+                                            <li>errorPage</li>
+                                            <ul>
+                                                <li>if not placed, something happens</li>
+                                            </ul>
+                                            <li>extends</li>
+                                            <li>import</li>
+                                            <li>info</li>
+                                            <li>isELIgnored</li>
+                                            <li>isErrorPage</li>
+                                            <ul>
+                                                <li>boolean, checks whether it is thrown</li>
+                                            </ul>
+                                            <li>isThreadSafe</li>
+                                            <li>language</li>
+                                            <li>pageEncoding</li>
+                                            <li>session</li>
+                                        </ul>
+                                    <li>%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %></li>
+                                        <ul>
+                                            <li>prefix</li>
+                                            <li>taglib</li>
+                                            <li>uri</li>
+                                        </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </ul>     
+            </div>
+        </div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>Java Servlets Core API Classes and Interfaces</h2>
+                <h3>Interfaces</h3>
+                    <ul>
+                        <li>ServletContext</li>
+                        <li>ServletConfig</li>
+                        <li>ServletRequest</li>
+                        <li>ServletResponse</li>
+                        <li>ServletContextListener</li>
+                        <li>RequestDispathcer</li>
+                        <li>SingleThreadModel</li>
+                        <li>Filter</li>
+                        <li>FilterConfig</li>
+                        <li>FilterChain</li>
+                        <li>ServletRequestListener</li>
+                    </ul>   
+                <h3>Classes</h3> 
+                    <ul>
+                        <li>ServletInputStream</li>
+                        <li>ServletOutputStream</li>
+                        <li>ServletRequestWrapper</li>
+                        <li>ServletResponseWrapper</li>
+                        <li>ServletRequestEvent</li>
+                        <li>ServletContextEvent</li>
+                        <li>ServletRequestAttributeEvent</li>
+                        <li>ServletContextAttributeEvent</li>
+                    </ul>
+            </div>
+        </div>
+
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>JSP Standard Actions</h2>
+                    <ul>
+                        <li>jsp:attribute</li>
+                        <li>jsp:include</li>
+                        <li>jsp:element</li>
+                        <li>jsp:body</li>
+                        <li>jsp:useBean</li>
+                        <li>jsp:plugin</li>
+                        <li>jsp:fallback</li>
+                        <li>jsp:forward</li>
+                        <li>jsp:param</li>
+                        <li>jsp:params</li>
+
+                    </ul>
+            </div>
+        </div>
+
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>JSP Standard Tag Library (JSTL)</h2>
+                    <ul>
+                        <li>Set of custom JSP elements that provide various programmatic functionality via markup syntax</li>
+                        <ul>
+                            <li>Core Tag Library</li>
+                            <ul>
+                                <li>variable support, flow control, URL management</li>
+                            </ul>
+                            <li>SQL Tag Library</li>
+                            <ul>
+                                <li>Database connections, queries, updates</li>
+                            </ul>
+                            <li>Internationalization Tag Library</li>
+                            <ul>
+                                <li>Locate setting, message bundling, number formatting, date formatting</li>
+                            </ul>
+                            <li>XML</li>
+                            <ul>
+                                <li>Core XML processing, flow control, transformation</li>
+                            </ul>
+                            <li>JSTL Function</li>
+                            <ul>
+                                <li>String functions, collection lengths</li>
+                            </ul>
+                        </ul>
+                        <li>In addition to the JSTL, developers can also create their own tag libraries for commonly occuring tasks</li>
+                    </ul>
+            </div>
+        </div>
+    
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>EL Expressions</h2>
+                    <ul>
+                        
+                        <li>param</li>
+                        <li>paramValues</li>
+                        <li>header</li>
+                        <li>headerValues</li>
+                        <li>cookie</li>
+                        <li>initParam</li>             
+                    </ul>
+            </div>
+        </div>
+
 		
 	
 
