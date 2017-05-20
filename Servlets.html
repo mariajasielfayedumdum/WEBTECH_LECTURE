@@ -24,29 +24,26 @@
                 </div>
                 <div class = "collapse navbar-collapse" id="navbar-collapse">
                     <ul class = "nav navbar-nav">
-                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Prelim">Prelim Lessons<span class = "caret"></span></a>
+                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Prelim">Prelim Lessons<span class = "caret"></span></a></li>
                             <ul class="dropdown-menu">
                                 <li><a href="Internet&worldwideweb.html">The Internet and World Wide Web</a></li>
                                 <li><a href="HTTP.html">HTTP and HTTP Fundamentals</a></li>
                             </ul>
-                        </li>
                                 
-                        <li class = "dropdown2"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Midterm">Midterm Lessons<span class = "caret"></span></a>
+                        <li class = "dropdown2"><a class = "dropdown-toggle" data-toggle="dropdown" href = "#Midterm">Midterm Lessons<span class = "caret"></span></a></li>
                              <ul class="dropdown-menu">
-                                <li><a href="HTML.html">HTML</a></li>
-                                <li><a href="CSS.html">CSS</a></li>
-                                <li><a href="JS.html">Javascript</a></li>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">Javascript</a></li>
                             </ul>
-                        </li>
                                 
-                        <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
+                        <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a></li>
                              <ul class="dropdown-menu">
                                 <li><a href="#">Client-side Scripting</a></li>
                                 <li><a href="#">Server-side Scripting</a></li>
                                 <li><a href="#">Web Servers and Web Clients</a></li>
                                 <li><a href="#">Web Applications</a></li>
                             </ul>
-                        </li>
             
 								<li><a href = "glossaries.html">Glossary</a></li>
                         <li><a href = "AboutUs.html">About Us</a></li>
@@ -184,7 +181,6 @@
                             <li>getCreationTime(), getLAstAccessedTime(), getMaxInactiveInterval(), getId(), isNew(), setMaxInactiveInterval(int all)</li>
                             <li>rqstDsp = request.getRequestDispatcher(res)</li>                    
                         </ul>
-                        <li> 
                         <ul>
                             <li>Destroying sessions</li>
                             <ul>
@@ -202,13 +198,88 @@
                 </ul>
             </div>
         </div>
+    
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>Servlet Configuration (ServletConfig)</h2>
+                    <ul>
+                        <li>getServlet(), getServletContext(), getInitParameter(), getInitParameterNames()</li>
+                    </ul>     
+            </div>
+        </div>
 
         <div class = "jumbotron" id = "start">
             <div class = "container">
                 <h2>JSP (JAVA Server Pages)</h2>
                     <ul>
                         <li>A technology that lets software developers create a dynamic web content </li>
-                        
+                        <li>Simply an HTML web page that contains additional bits of code that execute application logic to generate dynamic content</li>
+                        <li>JSP Actions (JSP tags) perform a variety of functions and extend the capabilities of JSP.</li>
+                        <li>JSP Actions uses XML-like syntax, and are used to manage JavaBeans component.</li>
+                        <li>Directives are instructions that are proessesed by the JSP engine when the page is compiled to a servlet</li>
+                        <li>Directives are used to set page-level instructions (page), insert data from external files (include), and specify custom tag libraries (taglib)</li>
+                        <ul>
+                            <li>%@     %></li>
+                        </ul>
+                        <li>Motivation</li>
+                        <ul>
+                            <li>It is typically a good idea to separate business logic from presentation concern</li>
+                            <ul>
+                                <li>Allows modern web development teams to be divided up into programmers and web page authors / designers</li>
+                                <li>Fosters component reuse (e.g. the same data object can be consumed by ser agents of varying capabilities and needs)</li>
+                            </ul>
+                            <li>Servlets can be very powerful for programming business logic, but are very awkward to use when generating static (i.e. templates) content.</li>
+                            <li>(X)HTML marked-up documents are very convenient for static content generation but cannot be used to program business logic (or generate dynamic content arising from data produced by the business logic).</li>
+                        </ul>
+                        <li>Features</li>
+                        <ul>
+                            <li>Text-based document caabe of enerating both static and dynamic content (typically intermixed)</li>
+                            <li>Mark-up based document syntax (JSP-style or XML-style), combining (X)HTML elements as well as standard and custome JSP elements; thus, web page authors can feel right "at home" with the mark-up syntax.</li>
+                            <li>Embedded Java Coding support via "scriptlets"</li>
+                            <ul>
+                                <li>%     %></li>
+                            </ul>
+                            <li>Template text are converted into JSPWriter.</li>
+                        </ul>
+                        <li>Components</li>
+                        <ul>
+                            <li>Template (i.e. static) text</li>
+                            <li>JSP Elements</li>
+                            <ul>
+                                <li>Directives</li>
+                                <ul>
+                                    <li>%@ page ContentType="text/html" pageEncoding="UTF-8" %></li>
+                                    <li>%@ page import="java.util.Random" %></li>
+                                        <ul>
+                                            <li>autoFlash</li>
+                                            <li>buffer</li>
+                                            <li>contentType</li>
+                                            <li>errorPage</li>
+                                            <ul>
+                                                <li>if not placed, something happens</li>
+                                            </ul>
+                                            <li>extends</li>
+                                            <li>import</li>
+                                            <li>info</li>
+                                            <li>isELIgnored</li>
+                                            <li>isErrorPage</li>
+                                            <ul>
+                                                <li>boolean, checks whether it is thrown</li>
+                                            </ul>
+                                            <li>isThreadSafe</li>
+                                            <li>language</li>
+                                            <li>pageEncoding</li>
+                                            <li>session</li>
+                                        </ul>
+                                    <li>%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %></li>
+                                        <ul>
+                                            <li>prefix</li>
+                                            <li>taglib</li>
+                                            <li>uri</li>
+                                        </ul>
+                                </ul>
+                            </ul>
+                        </ul>
                     </ul>     
             </div>
         </div>
@@ -266,8 +337,41 @@
 
         <div class = "jumbotron" id = "start">
             <div class = "container">
-                <h2>EL Expression</h2>
+                <h2>JSP Standard Tag Library (JSTL)</h2>
                     <ul>
+                        <li>Set of custom JSP elements that provide various programmatic functionality via markup syntax</li>
+                        <ul>
+                            <li>Core Tag Library</li>
+                            <ul>
+                                <li>variable support, flow control, URL management</li>
+                            </ul>
+                            <li>SQL Tag Library</li>
+                            <ul>
+                                <li>Database connections, queries, updates</li>
+                            </ul>
+                            <li>Internationalization Tag Library</li>
+                            <ul>
+                                <li>Locate setting, message bundling, number formatting, date formatting</li>
+                            </ul>
+                            <li>XML</li>
+                            <ul>
+                                <li>Core XML processing, flow control, transformation</li>
+                            </ul>
+                            <li>JSTL Function</li>
+                            <ul>
+                                <li>String functions, collection lengths</li>
+                            </ul>
+                        </ul>
+                        <li>In addition to the JSTL, developers can also create their own tag libraries for commonly occuring tasks</li>
+                    </ul>
+            </div>
+        </div>
+    
+        <div class = "jumbotron" id = "start">
+            <div class = "container">
+                <h2>EL Expressions</h2>
+                    <ul>
+                        
                         <li>param</li>
                         <li>paramValues</li>
                         <li>header</li>
