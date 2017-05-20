@@ -60,12 +60,143 @@
 		</div>
         <div class = "jumbotron" id = "start">
             <div class = "container">
-                <h1>Servlet</h1>
+                <h2>Servlet</h2>
                     <ul>
                         <li>Servelets are java programs that is deployed on a server to generate a dynamic web page.
                         </li>
                         <li>Servelts can access the entire JAVA API library and can also access JDBC API for accessing databases</li>
                     </ul>
+                <ul class="list-inline" id='HTML'>
+				<ul>
+				<li> Java Object based on the Servlet API.</li>
+				</ul>
+				<ul>
+				<li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most commonly used with HTTP and the term 'Servlet' is often used in the context of an "HTTP Servlet."</li>
+				</ul>
+				<ul>
+				<li>Web-tier components in the Jaa EE architecture.</li>
+				</ul>
+				<ul>
+				<li>Runs in, and is managed by, a web-tier container called the "Servlet Container".</li>
+				</ul>
+				<ul>
+				<li>Mapped to URLs which clients send requests</li>
+				</ul>
+				<ul>
+					<li>Typically asked with (among other things)</li>
+					<ul>
+						<li>Processing and/or storing data submitted via HTML forms</li>
+                        <li>Generating dynamic content</li>
+					</ul>
+				</ul>
+				<ul>
+					<li>javax.servlet</li>
+					<ul>
+						<li>Servlet, GenericServlet</li>
+                        <li>ServletRequest, ServletResponse</li>
+						<li>ServletConfig, ServletContext</li>
+                        <li>RequestDispatcher</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>javax.servlet.http</li>
+					<ul>
+						<li>HttpServlet</li>
+                        <li>HttpServletRequest</li>
+						<li>HttpServletResponse</li>
+                        <li>HttpSession</li>
+                        <li>Cookies</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>Servlet Processing</li>
+					<ul>
+						<li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container.</li>
+                        <li>Servlet container checks if servlet is already loaded.</li>
+						<li>If it is not loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</li>
+                        <li>Servlet container invokes the servlet's service method, passing request and responses, which is returned by the servlet container to the web server, which in turn sends the reponse to the client.</li>
+                        <li>Subsequent request to the sservlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes its destory method.</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>init(config)</li>
+					<ul>
+						<li>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup initialization</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>service(request, response)</li>
+					<ul>
+						<li>Invoked each time the servlet is called upon to process a request (typically on a separate thread for each call)</li>
+                        <li>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g. doGet, doPost) which is typically overridden too affect the servlet's functionality.</li>
+					</ul>
+				</ul>
+                <ul>
+					<li>Destroy()</li>
+					<ul>
+						<li>Invoked on the servlet by the servet contaainer when the servlet is to be unloaded (e.g. when the application is stopped or undeployed); can be used by servlet for clen-up processin (e.g. resource deal location)</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Request Processing(HttpServletRequest)</li>
+					<ul>
+						<li>Retriveing user-supplied request parameters</li>
+                        <li>Retriveing request header values</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Response Processing(HttpServletResponse)</li>
+					<ul>
+						<li>Setting response status code</li>
+                        <li>Setting response header</li>
+                        <li>Obtaining output object for sending the response</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Servlet Request Dispatching(RequestDispatcher)</li>
+					<ul>
+						<li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</li>
+                        <ul>
+                            <li>RequestDispatcher rqstDsp;</li>
+                            <li>rqstDsp = request.getRequestDispatcher(res)</li>                    
+                        </ul>
+                        <li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included (e.g. use for banners, footers, etc.)</li>
+                        <ul>
+                            <li>rqstDsp.include(request, response)</li>                    
+                        </ul>
+                        <li>Forwards the processing of the current request to the dispatcher resource; the servlet processing th current request must not generate a response (e.g. use in MVC "Controller" servlets)</li>
+                    </ul>
+				</ul>
+                <ul>
+					<li>Session Tracking(HttpSession)</li>
+					<ul>
+						<li>Session tracking support is implemented either cookies or URL-rewriting.</li>
+                        <li>Obtaining session object from the current request</li>
+                        <ul>
+                            <li>HttpSession session;</li>
+                            <li>session = request.getSession(createNew)</li>                    
+                        </ul>
+                        <li>Obtaining session information(HttpSession)</li>
+                        <ul>
+                            <li>getCreationTime(), getLAstAccessedTime(), getMaxInactiveInterval(), getId(), isNew(), setMaxInactiveInterval(int all)</li>
+                            <li>rqstDsp = request.getRequestDispatcher(res)</li>                    
+                        </ul>
+                        <li> 
+                        <ul>
+                            <li>Destroying sessions</li>
+                            <ul>
+                                <li>invalidate() - ppurge the current session</li>                        
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>URL-rewriting(HttpServletResponse)</li>
+                            <ul>
+                                <li>encodeURL(String url), encodeRedirectURL(String url)</li>                        
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+                </ul>
             </div>
         </div>
 
