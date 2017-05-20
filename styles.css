@@ -238,25 +238,85 @@ footer{}
 .containertwo .uhttp {
     display: flex;
 }
-.containertwo .uhttp .list-inline {
+.containertwo .uhttp .list-group-item {
     margin-top: 2%;
     margin-left: 1%;
 }
 .containertwo .uhttp h2 {
-    margin-left:1%;
-    margin-top: 2%;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 .containertwo .uhttp{
-    display: inline-flex;
+    display: table;
+}
+.containertwo .uhttp h2{
+    text-align: center;
 }
 .containertwo .uhttp .uri {
     text-align: left;
-    margin-left: -5%;
-    width: 30%;
+    margin-left: 1%;
+    width: 15%;
+    display: table-cell;
 }
 .containertwo .uhttp .uritwo {
-    text-align: right;
-    margin-right: 2%;
+    text-align: left;
+    margin-right: -2%;
+    width: 25%;
+    display: table-cell;
+}
+.containertwo .uhttp .urithree {
+    text-align: left;
+    width: 25%;
+    display: table-cell;
+}
+.containertwo .uhttp .urifour{
+    text-align: left;
     width: 20%;
+    margin-right: 2%;
+    display: table-cell;
+}
+.container .resource {
+    display: flex;
+}
+.container .resource h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    margin-top: 15%;
+    margin-left: -5%;
+}
+.containerthree .request {
+    display: flex;
+    margin-left: -3%;
+    margin-top: -2%;
+}
+.containerthree .request h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    margin-top: 15%;
+}
+.container .version {
+    display: flex;
+    margin-left: -5%;
+     margin-top: -2%;
+}
+.container .version h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.containerthree .response {
+    display: flex;
+    margin-top: -2%;
+}
+.containerthree .response .list-group-item {
+    width: 77%;
+}
+.containerthree .response h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    margin-top: 15%;
+    margin-left: 3%;
+    width: 20%;
+}
+.container .ext{
+    display: flex;
+    margin-left: -5%;
+     margin-top: -2%;
+}
+.container .ext h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }

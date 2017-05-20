@@ -37,7 +37,7 @@
                                 <li><a href="CSS.html">CSS</a></li>
                                 <li><a href="JS.html">Javascript</a></li>
                                 </ul>
-                            </li>
+                                </li>
                         <li class = "dropdown3"><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#Finals">Final Lessons<span class = "caret"></span></a>
                              <ul class="dropdown-menu">
                                 <li><a href="#">Client-side Scripting</a></li>
@@ -60,16 +60,18 @@
 	</div>
         <div class = "jumbotron" id = "start">   
             <div class = "container">
+                <div class="http">
                 <h2>Hypertext Transfer Protocol <span class="acronym" >(HTTP)</span></h2>
                 <ul class = "list-inline" id='HTTP'>
+                    <ul>
                     <li>application layer communication protocol used to access and used primarily to retrieve hypertext (on hypermedia) documents and resources on the World Wide Web</li>
 					<li>Jointly developed by the W3C and the IETF</li>
-                    <ul>
-                        <li>standard that is used by application that communicate with one another</li>
-                    </ul>
-                        <li>invented by Tim Berners-Lee (Timothy)</li>
-                        <li>jointly developed by the W3C (world wide web consortium) and the IETF (internet engineering task force)</li>
-                        <li>version history</li>
+                    <li>standard that is used by application that communicate with one another</li>
+                    <li>invented by Tim Berners-Lee (Timothy)</li>
+                    <li>jointly developed by the W3C (world wide web consortium) and the IETF (internet engineering task force)</li></ul>
+                    <br>                    <br>
+
+                        <li>Version History:</li>
                     <ul id='history'>
                         <li>HTTP 0.9 (1991)</li>
                         <ul>
@@ -86,12 +88,18 @@
                     <li>SPDY – accessing from the browser</li>
                 </ul>
             </div>
+                </div>
         </div> 
         <div class = "containertwo">
+            <div class="uhttp">
             <h2>HTTP(unsecure) Fundamentals</h2>
-            <ul class = "list-inline" id="Fundamentals">
-                <li>runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
-				<li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
+            <ul class="list-group-item list-group-item-success" id="Fundamentals">
+              <div class="uri">
+                <li>*runs on top of TCP/IP using TCP port 80 by default, or TCP port 443 for HTTPS (secured) (HTTP over SSL/TLS (secure socket layer/transport layer security)</li>
+                
+                
+				<li>*HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
+                
 				<ul>
 					 <li>Scheme (http: or https:)</li>
 					 <li>(optional) authentication information</li>
@@ -101,31 +109,35 @@
 					 <li>(optional) URL-encoded query</li>
 					 <li>(optional) bookmark (or fragment identifier)</li>
 				</ul>
-				<ul>
-                <li>uses a request-response standard protocol</li>
-                <li>the client sends an HTTP request message to the server</li>
-                <li>the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
-                <li>is a stateless communications protocol</li>
-                <li>server do not keep information from client in-between</li>
-                <li>server send a requests and forget about it</li>
-                <li>based on a client-server architecture</li>
-				</ul>
-                <ul>
-                    <li>clients a.k.a user agents (ua)</li>
+                </div>
+                
+                <div class="uritwo">
+				
+                <li>*uses a request-response standard protocol</li>
+                <li>*the client sends an HTTP request message to the server</li>
+                <li>*the server processes the request and replies with an HTTP response message (eg. 200 ok)</li>
+                <li>*is a stateless communications protocol</li>
+                <li>*server do not keep information from client in-between</li>
+                <li>*server send a requests and forget about it</li>
+                <li>*based on a client-server architecture</li>
+				<li>*Clients a.k.a User Agents (UA):</li>
                     <ul>
                         <li>web browser, web crawlers/spiders, other end user tools and applications</li>               
                     </ul>
-                    <li>server</li>
+                    <li>Server:</li>
                     <ul>
                         <li>origin server</li>
                         <li>proxy server (eg. Authentication server), gateways, tunnels</li>
                         <li>access by the client</li>
                     </ul>
-                    <li>IANA – internet assigned numbers authority</li>
-                    <li>ICANN – Internet Corporation for assigned names and numbers</li>
-                    <li>push protocol – server can volunteer information</li>
+                    <li>*IANA – internet assigned numbers authority</li>
+                
+                </div>
+                <div class="urithree">
+                    <li>*ICANN – Internet Corporation for assigned names and numbers</li>
+                    <li>*push protocol – server can volunteer information</li>
                     <li>polling – periodically check for the information</li>
-                    <li>provides support for other functionalities, such as:</li>
+                    <li>*provides support for other functionalities, such as:</li>
                     <ul>
                         <li>cache control – stored of CSS</li>
                         <li>content media type (MIME – multipurpose internet mail extensions) specification</li>
@@ -143,15 +155,20 @@
                         <li>request pipelining – one connection</li>
                         <li>authentication/authorization (eg. Screen readers – to read the content for you) content and transfer coding</li>        
                     </ul>
-                </ul>
+                
+                    </div>
+                    
             </ul>
+                
+            </div>
         </div>
         <div class = "jumbotron">  
             <div class = "container">
+                <div class="resource">
                 <h2>HTTP resource addressing</h2>
-                <ul class = "list-inline" id='Addressing'>
+                <ul>
                     <li>identifies using URI (uniform resource identifier) (RFC 3986) or more specifically, HTTP URIs</li>
-                    <ul>
+                    <ul >
                         <li>2 subtypes of URI:</li>
                         <ul>
                             <li>URN – uniform resource name (eg ISBN(international standard book number), UPC(universal product code))</li>
@@ -165,7 +182,7 @@
                         <li>port number</li>
                     </ul>
                     <li>path to resource (resolved relative to the document root on the server)</li>
-                </ul>
+                
                 <p>*absolute authority – http://usr:pwd@server.org:81/ in/prof.php – path ; img src: “a.jpg” -- may refer to a static or dynamic resource</p>
 
                 <li>query - typically provided as key = value pairs, with ("&" - ampersand) separators between key/value pairs. It may be URL-encoded.</li>
@@ -174,11 +191,14 @@
                 <ul>
                     <li>letencrypt.org - digital certificates for free</li>
                 </ul>
+                </ul>
             </div>
+                </div>
         </div>
         <div class = "containerthree">
+            <div class="request">
             <h2>HTTP Request Message</h2>
-                <ul class="list-inline" id='RequestMsg'>
+                 <ul class="list-group-item list-group-item-info">
                     <li>Request line (CRLF - carriage return line feed  - terminated line)</li>
                     <p>Methods:</p>
                     <ul>
@@ -205,11 +225,13 @@
                         <li>RFC 2616 - 4236 Update Required</li>    
                     </ul>
                 </ul>
+                </div>
         </div>
 		 <div class = "jumbotron">  
             <div class = "container">
+                <div class="version">
 				<h2>HTTP Protocol Version</h2>
-				<ul class = "list-inline" id='Protocol'>
+				 <ul>
 					<li>Message Headers (general, request, and/or entity header)</li>
 					<ul>
 						<li>fieldname: value</li>
@@ -321,11 +343,13 @@
 						<li>delete – remove the request URI</li>
 					</ul>
 				</ul>
+                </div>
 			</div>
 		</div>  
         <div class = "containerthree">
+            <div class="response">
             <h2>HTTP Response Message</h2>
-            <ul class="list-inline"  id='Response'>
+            <ul class="list-group-item list-group-item-danger">
                 <li>status line (special line)</li>
                 <ul>
                     <li>HTTP protocol version</li>
@@ -393,11 +417,13 @@
                     </ul>
                 </ul>
             </ul>
+            </div>
         </div>
         <div class = "jumbotron">  
             <div class = "container">
+                <div class="ext">
             <h2>HTTP – extensible protocol</h2>
-                <ul class="list-inline" id='extensible'>
+                 <ul>
                     <li>basic ways (communicate to new base protocol functionality):</li>
                     <ul>
                         <li>new request method</li>
@@ -405,6 +431,7 @@
                         <li>new status code</li>
                     </ul>
                 </ul>
+            </div>
             </div>
         </div>
     </body>
