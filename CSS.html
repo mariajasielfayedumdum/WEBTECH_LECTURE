@@ -8,6 +8,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Allura|Arima+Madurai|Cinzel+Decorative|Corben|Dancing+Script|Galindo|Gentium+Book+Basic|Great+Vibes|Henny+Penny|Indie+Flower|Kaushan+Script|Kurale|Life+Savers|Love+Ya+Like+A+Sister|Milonga|Miltonian+Tattoo|Niconne|Oregano|Original+Surfer|Pangolin|Parisienne|Philosopher|Princess+Sofia|Rancho|Risque|Salsa|Schoolbell|Special+Elite" rel="stylesheet">
 		<link rel="stylesheet" media="screen" href="styles.css" />
+		<style type="text/css">
+			button {
+			    background-color: white;
+			    color: black;
+			    border: 2px solid #555555;
+			}
+
+			button:hover {
+			    background-color: #555555;
+			    color: white;
+			}
+		</style>
 </HEAD>
 <BODY>
 	<nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
@@ -79,30 +91,51 @@
 		<div class = "container">
 			<h2>CSS Version</h2>
 			<ul class = "list-inline" id='Versions'>
-				<li>CSS 1</li>
-				<ul>
-                    <li>Level  of 1 cascading style sheet mechanism</li>
-                    <li>Released on December 17, 1996 </li>
-					<li> Now Obsolete </li>
-                </ul>
-				<li>CSS 2.0</li>
-				<ul>
-					<li> Developed by W3c </li>
-					<li> Released in May 1998 </li>
-					<li> Capabilities like absolute type of coding </li>
-				</ul>
-				<li>CSS 2.1</li>
-				<ul>
-					<li> Removes poorly supported and not fully interoperable features in CSS 2.0 </li>
-					<li> Adds already implemented browser extensions </li>
-					<li> Released on June 7, 2011 </li>
-				</ul>
-				<li>CSS 3</li>
-				<ul>
-					<li> Divided into several documents called modules </li>
-					<li> Modules has its own capabilities or extends features defined in CSS 2 </li>
-					<li> Released on June 19,2012
-				</ul>
+				
+				<div>
+                    <button data-toggle="collapse" data-target="#Collapse-Div" style="margin: 20px;">CSS 1</button>
+                </div>
+                <div id = "Collapse-Div" class ="collapse">
+					<ul>
+	                    <li>Level  of 1 cascading style sheet mechanism</li>
+	                    <li>Released on December 17, 1996 </li>
+						<li> Now Obsolete </li>
+	                </ul>
+                </div>
+				
+				<div>
+                    <button data-toggle="collapse" data-target="#Collapse-Div2" style="margin: 20px;">CSS 2.0</button>
+                </div>
+                <div id = "Collapse-Div2" class ="collapse">
+					<ul>
+						<li> Developed by W3c </li>
+						<li> Released in May 1998 </li>
+						<li> Capabilities like absolute type of coding </li>
+					</ul>
+				</div>
+				
+				<div>
+                    <button data-toggle="collapse" data-target="#Collapse-Div3" style="margin: 20px; ">CSS 2.1</button>
+                </div>
+                <div id = "Collapse-Div3" class ="collapse">
+					<ul>
+						<li> Removes poorly supported and not fully interoperable features in CSS 2.0 </li>
+						<li> Adds already implemented browser extensions </li>
+						<li> Released on June 7, 2011 </li>
+					</ul>
+				</div>
+				
+				<div>
+                    <button data-toggle="collapse" data-target="#Collapse-Div4" style="margin: 20px;">CSS 3</button>
+                </div>
+                <div id = "Collapse-Div4" class ="collapse">
+					<ul>
+						<li> Divided into several documents called modules </li>
+						<li> Modules has its own capabilities or extends features defined in CSS 2 </li>
+						<li> Released on June 19,2012
+					</ul>
+				</li>
+				</li>
 			</ul>
 		</div>
 		<div class = "jumbotron" id = "start">
