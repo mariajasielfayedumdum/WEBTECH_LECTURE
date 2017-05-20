@@ -1,8 +1,22 @@
-.jumbotron #intro h2 {
+.jumbotron .cont #intro h2 {
 	font-family: love ya like a sister;
 	margin-left: 1%;
 }
-.jumbotron #intro p {
+.jumbotron .cont #intro p {
+	font-family: salsa;
+}
+.jumbotron .cont #sec h2 {
+	font-family: love ya like a sister;
+	margin-left: 1%;
+}
+.jumbotron .cont #sec p {
+	font-family: salsa;
+}
+.jumbotron .cont #thr h2 {
+	font-family: love ya like a sister;
+	margin-left: 1%;
+}
+.jumbotron .cont #thr p {
 	font-family: salsa;
 }
 body {
@@ -146,6 +160,25 @@ footer{}
 .jumbotron .acronym{
 	font-family: corben;
 }
+#intro h2 {
+    margin-top: 2%;
+    text-align: center;
+}
+#intro {
+    width: 35%;
+    text-align: left;
+    margin-left:1%;
+}
+#sec {
+    width:30%;
+    text-align: center;
+    margin-left: -10%;
+}
+#thr {
+    width: 30%;
+    text-align: right;
+    margin-left: -10%;
+}
 .containertwo h2{
 	font-family: great vibes;
 	margin-top: 3%;
@@ -174,11 +207,56 @@ footer{}
 .containerthree li{
 	font-family: kurale;
 	font-size: 140%;
-margin-left: 8%;	
+    margin-left: 8%;	
 }
 .containerthree p{
 	font-family: kurale;
 	font-size: 140%;
 	margin-left: 8%;
 	margin-top: 2%;
+}
+.carousel-inner {
+    margin-top: 2%;
+    width: 100%;
+}
+.cont {
+    display: flex;
+    font-size: 85%;
+}
+.container .http {
+    display: flex;
+}
+.container .http .list-inline {
+    margin-top: 2%;
+    margin-left: -6%;
+}
+.container .http h2 {
+    margin-left:-6%;
+    margin-top: 20%;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.containertwo .uhttp {
+    display: flex;
+}
+.containertwo .uhttp .list-inline {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+.containertwo .uhttp h2 {
+    margin-left:1%;
+    margin-top: 2%;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.containertwo .uhttp{
+    display: inline-flex;
+}
+.containertwo .uhttp .uri {
+    text-align: left;
+    margin-left: -5%;
+    width: 30%;
+}
+.containertwo .uhttp .uritwo {
+    text-align: right;
+    margin-right: 2%;
+    width: 20%;
 }
